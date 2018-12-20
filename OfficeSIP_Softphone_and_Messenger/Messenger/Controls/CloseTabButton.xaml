@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Messenger.Controls.CloseTabButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="10" Width="10" Margin="0,-4,-5, 0">
+    <Button Focusable="False" Click="Button_Click">
+        <Button.Content>
+            <Viewbox Stretch="Uniform">
+                <Canvas Width="5" Height="5">
+                    <Line Fill="Red" Stroke="DarkRed" X1="0" Y1="0" X2="5" Y2="5"></Line>
+                    <Line Fill="Red" Stroke="DarkRed" X1="0" Y1="5" X2="5" Y2="0"></Line>
+                </Canvas>
+            </Viewbox>
+        </Button.Content>
+    </Button>
+</UserControl>

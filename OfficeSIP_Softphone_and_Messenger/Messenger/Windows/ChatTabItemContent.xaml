@@ -1,0 +1,110 @@
+﻿<UserControl x:Class="Messenger.Windows.ChatTabItemContent"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:w="clr-namespace:Messenger.Windows"
+    xmlns:r="clr-namespace:RichTextBoxEx;assembly=RichTextBoxEx" 
+    xmlns:fc="clr-namespace:Messenger.Controls">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <w:ComposingConverter x:Key="ComposingConverter"></w:ComposingConverter>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MaxHeight="80"></RowDefinition>
+            <RowDefinition Height="Auto" MinHeight="5"></RowDefinition>
+            <RowDefinition Height="*" MinHeight="40"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="60" MinHeight="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="26"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <ListView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="Black" BorderBrush="LightGray" ItemsSource="{Binding Path='Session.PartipantLogs'}" Height="Auto" SizeChanged="ListView_SizeChanged" LostFocus="ListView_LostFocus">
+            <ListView.View>
+                <GridView>
+                    <GridView.ColumnHeaderContainerStyle>
+                        <Style>
+                            <Setter Property="GridViewColumnHeader.Visibility" Value="Collapsed"></Setter>
+                        </Style>
+                    </GridView.ColumnHeaderContainerStyle>
+                    <GridViewColumn Header="Icon" Width="28">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Width="14" Height="14" Opacity="0.75" Source="{Binding Path=Availability, Converter={StaticResource StateConverter}}"></Image>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="DisplayName" Width="0">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=DisplayNameOrAor}" Foreground="{Binding Path=Id, Converter={StaticResource ParticipantIdConverter}}"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Composing" Width="50" DisplayMemberBinding="{Binding Path=IsComposing, Converter={StaticResource ComposingConverter}}" ></GridViewColumn>
+                    <GridViewColumn Header="State" Width="120" DisplayMemberBinding="{Binding Path=State, Converter={StaticResource ParticipantStateConverter}}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" VerticalAlignment="Bottom" DataContext="{Binding Path=Session.TransfersManager.Incoming}" Visibility="{Binding Path=CurrentFile, Converter={StaticResource VisibilityConverter}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Grid.Row="0">
+                <TextBlock><Span x:Uid="i1">Receiving file</Span> (<TextBlock FontStyle="Italic" Text="{Binding Path=CurrentFile.FileName}"></TextBlock>) <TextBlock Text="{Binding Path=CurrentIndex}"></TextBlock> <Span x:Uid="i2">of</Span> <TextBlock Text="{Binding Path=MaxIndex}"></TextBlock>...</TextBlock>
+            </Label>
+            <ProgressBar Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="0,3,0,3" Height="9" Minimum="0" Maximum="100" Value="{Binding Path=TransferedPercents}"></ProgressBar>
+            <Button Grid.Column="1" Grid.Row="0" Name="SkipButton" MinWidth="50" Margin="4,2,0,2" x:Uid="b1">Skip</Button>
+            <Button Grid.Column="2" Grid.Row="0" Name="CancelButton" MinWidth="50" Margin="4,2,0,2" x:Uid="b2">Cancel</Button>
+        </Grid>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <r:RichTextBoxEx Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Name="ChatViewer" IsReadOnly="True" VerticalScrollBarVisibility="Visible">
+            <r:RichTextBoxEx.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </r:RichTextBoxEx.Resources>
+        </r:RichTextBoxEx>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <Grid Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Margin="0,0,0,3" DataContext="{Binding Path=Session.TransfersManager.Outgoing}" Visibility="{Binding Path=CurrentFile, Converter={StaticResource VisibilityConverter}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0">
+                <TextBlock><Span x:Uid="i3">Sending file</Span> (<TextBlock FontStyle="Italic" Text="{Binding Path=CurrentFile.FileName}"></TextBlock>) <TextBlock Text="{Binding Path=CurrentIndex}"></TextBlock> <Span x:Uid="i4">of</Span> <TextBlock Text="{Binding Path=MaxIndex}"></TextBlock>...</TextBlock>
+            </Label>
+            <ProgressBar Grid.Column="1" Height="9" Minimum="0" Maximum="100" Value="{Binding Path=TransferedPercents}"></ProgressBar>
+        </Grid>
+        <GridSplitter Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Height="3" ResizeBehavior="PreviousAndNext" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" ShowsPreview="False"></GridSplitter>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <r:RichTextBoxEx Grid.Row="5" Grid.Column="0" VerticalScrollBarVisibility="Auto" AcceptsReturn="False" Name="OutgoingMessageEdit" IsEnabled="{Binding Path=IsRestoringSession, Converter={StaticResource InverseConverter}, Mode=OneWay}">
+            <r:RichTextBoxEx.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </r:RichTextBoxEx.Resources>
+        </r:RichTextBoxEx>
+        <Button IsDefault="True" Grid.Row="4" Grid.Column="1" Name="SendButton" ToolTip="Send Message ( Ctrl+Enter )" IsEnabled="{Binding Path=IsRestoringSession, Converter={StaticResource InverseConverter}, Mode=OneWay}">
+            <Button.Content>
+                <TextBlock x:Uid="b3">
+                    <TextBlock.LayoutTransform>
+                        <RotateTransform Angle="270"></RotateTransform>
+                    </TextBlock.LayoutTransform>
+                    <TextBlock.Text>Send</TextBlock.Text>
+                </TextBlock>
+            </Button.Content>
+        </Button>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    </Grid>
+</UserControl>

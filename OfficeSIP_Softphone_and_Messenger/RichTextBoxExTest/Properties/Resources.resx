@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="yahoo" xml:space="preserve">
+    <value>&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/24.gif" alt="rolling on the floor"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;=))&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;rolling on the floor&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=""&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/25.gif" alt="angel"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;O:-)&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;angel&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/26.gif" alt="nerd"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:-B&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;nerd&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=""&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/27.gif" alt="talk to the hand"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;=;&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;talk to the hand&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/101.gif" alt="call me"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:-c&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;call me&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=""&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/100.gif" alt="on the phone"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:)]&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;on the phone&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/102.gif" alt="at wits' end"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;~X(&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;at wits' end&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=""&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/103.gif" alt="wave"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:-h&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;wave&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/104.gif" alt="time out"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:-t&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;time out&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=""&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/105.gif" alt="day dreaming"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;8-&amp;gt;&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;day dreaming&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/28.gif" alt="sleepy"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;I-)&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;sleepy&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=""&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/29.gif" alt="rolling eyes"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;8-|&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;rolling eyes&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/30.gif" alt="loser"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;L-)&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;loser&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="status9"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/31.gif" alt="sick"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:-&amp;amp;&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;sick&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/32.gif" alt="don't tell anyone"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:-$&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;don't tell anyone&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=""&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/33.gif" alt="no talking"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;[-(&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;no talking&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/34.gif" alt="clown"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:O)&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;clown&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=""&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/35.gif" alt="silly"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;8-}&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;silly&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/36.gif" alt="party"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;&amp;lt;:-P&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;party&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="status9"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/37.gif" alt="yawn"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;(:|&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;yawn&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/38.gif" alt="drooling"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;=P~&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;drooling&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="status9"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/39.gif" alt="thinking"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:-?&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;thinking&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/40.gif" alt="d'oh"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;#-o&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;d'oh&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=""&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/41.gif" alt="applause"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;=D&amp;gt;&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;applause&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/42.gif" alt="nail biting"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:-SS&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;nail biting&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=""&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/43.gif" alt="hypnotized"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;@-)&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;hypnotized&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/44.gif" alt="liar"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:^o&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;liar&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=""&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/45.gif" alt="waiting"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:-w&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;waiting&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/46.gif" alt="sigh"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:-&amp;lt;&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;sigh&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=""&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/47.gif" alt="phbbbbt"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;&amp;gt;:P&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;phbbbbt&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/48.gif" alt="cowboy"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;&amp;lt;):)&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;cowboy&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=""&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/109.gif" alt="I don't want to see"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;X_X&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;I don't want to see&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/110.gif" alt="hurry up!"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:!!&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;hurry up!&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=""&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/111.gif" alt="rock on!"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;\m/&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;rock on!&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/112.gif" alt="thumbs down"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:-q&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;thumbs down&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=""&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/113.gif" alt="thumbs up"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:-bd&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;thumbs up&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class="alternate"&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/114.gif" alt="it wasn't me"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;^#(^&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;it wasn't me&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr class=""&gt;
+			&lt;td&gt;&lt;img src="Emoticons%20-%20Yahoo%21%20Messenger_files/pirate_2.gif" alt="pirate*"&gt;&lt;/td&gt;
+			&lt;td&gt;&lt;kbd&gt;:ar!&lt;/kbd&gt;&lt;/td&gt;
+			&lt;td class="description"&gt;&lt;span&gt;pirate*&lt;/span&gt;&lt;/td&gt;
+		&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/108.gif" alt="puppy dog eyes"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;:o3&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;puppy dog eyes&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/106.gif" alt="I don't know"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;:-??&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;I don't know&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/107.gif" alt="not listening"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;%-(&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;not listening&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/49.gif" alt="pig"&gt;&lt;/td&gt;
+
+				&lt;td&gt;&lt;kbd&gt;:@)&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;pig&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/50.gif" alt="cow"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;3:-O&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;cow&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/51.gif" alt="monkey"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;:(|)&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;monkey&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/52.gif" alt="chicken"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;~:&amp;gt;&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;chicken&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/53.gif" alt="rose"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;@};-&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;rose&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/54.gif" alt="good luck"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;%%-&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;good luck&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/55.gif" alt="flag"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;**==&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;flag&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/56.gif" alt="pumpkin"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;(~~)&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;pumpkin&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/57.gif" alt="coffee"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;~O)&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;coffee&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/58.gif" alt="idea"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;*-:)&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;idea&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/59.gif" alt="skull"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;8-X&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;skull&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/60.gif" alt="bug"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;=:)&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;bug&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/61.gif" alt="alien"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;&amp;gt;-)&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;alien&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/62.gif" alt="frustrated"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;:-L&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;frustrated&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/63.gif" alt="praying"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;[-O&amp;lt;&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;praying&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/64.gif" alt="money eyes"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;$-)&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;money eyes&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/65.gif" alt="whistling"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;:-"&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;whistling&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/66.gif" alt="feeling beat up"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;b-(&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;feeling beat up&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/67.gif" alt="peace sign"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;:)&amp;gt;-&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;peace sign&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/68.gif" alt="shame on you"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;[-X&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;shame on you&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/69.gif" alt="dancing"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;\:D/&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;dancing&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/70.gif" alt="bring it on"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;&amp;gt;:/&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;bring it on&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/71.gif" alt="hee hee"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;;))&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;hee hee&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/76.gif" alt="chatterbox"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;:-@&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;chatterbox&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/77.gif" alt="not worthy"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;^:)^&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;not worthy&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/78.gif" alt="oh go on"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;:-j&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;oh go on&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/79.gif" alt="star"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;(*)&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;star&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/72.gif" alt="hiro"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;o-&amp;gt;&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;hiro&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/73.gif" alt="billy"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;o=&amp;gt;&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;billy&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/74.gif" alt="april"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;o-+&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;april&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/75.gif" alt="yin yang"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;(%)&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;yin yang&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/115.gif" alt="bee"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;:bz&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;bee&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr class="alternate"&gt;
+				&lt;td&gt;&lt;img src="hiddenemoticons_files/transformer.gif" alt="transformer*"&gt;&lt;/td&gt;
+				&lt;td&gt;&lt;kbd&gt;[..]&lt;/kbd&gt;&lt;/td&gt;
+				&lt;td class="description"&gt;&lt;span&gt;transformer*&lt;/span&gt;&lt;/td&gt;
+			&lt;/tr&gt;</value>
+  </data>
+</root>

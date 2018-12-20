@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3749FD44-774A-4600-818C-C01807C71C42}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RichTextBoxEx</RootNamespace>
+    <AssemblyName>RichTextBoxEx</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimatedImage.cs" />
+    <Compile Include="Bitmap.cs" />
+    <Compile Include="GifDecoder.cs" />
+    <Compile Include="RabinKarp.cs" />
+    <Compile Include="RichTextBoxEx.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="StateMachine.cs" />
+    <Compile Include="YahooEmoticons.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\35.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\37.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\38.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\40.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\41.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\42.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\45.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\47.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\69.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\100.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\101.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\102.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\103.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\104.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\105.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\109.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\110.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\112.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\113.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\114.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pirate_2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\49.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\51.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\53.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\56.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\57.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\58.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\59.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\60.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\63.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\65.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\66.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\67.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\68.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\70.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\71.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\72.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\73.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\74.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\75.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\76.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\77.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\78.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\79.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\106.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\107.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\108.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\115.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transformer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Notice.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

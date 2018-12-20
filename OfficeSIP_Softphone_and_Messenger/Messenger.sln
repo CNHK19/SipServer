@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messenger", "Messenger\Messenger.csproj", "{6BCD3CC5-B4DA-4422-A1A1-DD0127240A2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UccpApiErrors", "UccpApiErrors\UccpApiErrors.csproj", "{8B72FA3C-C567-4DE0-A6C9-89A0C825D5B6}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupMessenger", "SetupMessenger\SetupMessenger.vdproj", "{91D2FCDF-30C3-4A1C-9CC2-99CDBD384B6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RichTextBoxEx", "RichTextBoxEx\RichTextBoxEx.csproj", "{3749FD44-774A-4600-818C-C01807C71C42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RichTextBoxExTest", "RichTextBoxExTest\RichTextBoxExTest.csproj", "{CD606EC7-6287-4225-8FDC-8EFB4C75C5CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Softphone", "Softphone\Softphone.csproj", "{29CA7AC4-441C-4848-AEF8-B3073772D045}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupSoftphone", "SetupSoftphone\SetupSoftphone.vdproj", "{AACFCFD4-EF7F-4A11-B199-9CB6FB5B71E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BCD3CC5-B4DA-4422-A1A1-DD0127240A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BCD3CC5-B4DA-4422-A1A1-DD0127240A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BCD3CC5-B4DA-4422-A1A1-DD0127240A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BCD3CC5-B4DA-4422-A1A1-DD0127240A2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B72FA3C-C567-4DE0-A6C9-89A0C825D5B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B72FA3C-C567-4DE0-A6C9-89A0C825D5B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B72FA3C-C567-4DE0-A6C9-89A0C825D5B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B72FA3C-C567-4DE0-A6C9-89A0C825D5B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91D2FCDF-30C3-4A1C-9CC2-99CDBD384B6B}.Debug|Any CPU.ActiveCfg = Debug
+		{91D2FCDF-30C3-4A1C-9CC2-99CDBD384B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91D2FCDF-30C3-4A1C-9CC2-99CDBD384B6B}.Release|Any CPU.ActiveCfg = Release
+		{91D2FCDF-30C3-4A1C-9CC2-99CDBD384B6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3749FD44-774A-4600-818C-C01807C71C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3749FD44-774A-4600-818C-C01807C71C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3749FD44-774A-4600-818C-C01807C71C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3749FD44-774A-4600-818C-C01807C71C42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD606EC7-6287-4225-8FDC-8EFB4C75C5CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD606EC7-6287-4225-8FDC-8EFB4C75C5CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD606EC7-6287-4225-8FDC-8EFB4C75C5CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD606EC7-6287-4225-8FDC-8EFB4C75C5CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29CA7AC4-441C-4848-AEF8-B3073772D045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29CA7AC4-441C-4848-AEF8-B3073772D045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29CA7AC4-441C-4848-AEF8-B3073772D045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29CA7AC4-441C-4848-AEF8-B3073772D045}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AACFCFD4-EF7F-4A11-B199-9CB6FB5B71E4}.Debug|Any CPU.ActiveCfg = Debug
+		{AACFCFD4-EF7F-4A11-B199-9CB6FB5B71E4}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

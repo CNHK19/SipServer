@@ -1,0 +1,249 @@
+﻿<w:WindowEx x:Class="Messenger.Windows.Contacts"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:w="clr-namespace:Messenger.Windows"
+    xmlns:u="clr-namespace:Uccapi"
+    xmlns:l="clr-namespace:Messenger"
+    xmlns:p="clr-namespace:Messenger.Properties"
+    Title="OfficeSIP Messenger"
+    Left="{Binding Source={StaticResource Settings}, Path=Default.Left, Mode=TwoWay}"
+    Top="{Binding Source={StaticResource Settings}, Path=Default.Top, Mode=TwoWay}"
+    Width="{Binding Source={StaticResource Settings}, Path=Default.Width, Mode=TwoWay}"
+    Height="{Binding Source={StaticResource Settings}, Path=Default.Height, Mode=TwoWay}"
+    WindowStyle="SingleBorderWindow" ResizeMode="CanResize" ShowInTaskbar="False"
+    Background="Transparent" Visibility="Visible" SnapsToDevicePixels="True"
+    Loaded="Window_Loaded" Closed="Window_Closed">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style x:Key="stateImageStyle" TargetType="{x:Type Image}">
+                <Setter Property="Margin" Value="5,2,5,2" />
+                <Setter Property="Width" Value="16" />
+                <Setter Property="Height" Value="16" />
+            </Style>
+            <ContextMenu x:Key="NotifierContextMenu" Placement="MousePoint">
+                <MenuItem Command="w:Commands.Close"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Command="w:Commands.About"></MenuItem>
+                <MenuItem Command="w:Commands.Preferences"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Click="StateMenuItem_Click" DataContext="{x:Static u:AvailabilityValues.Online}" Header="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}">
+                    <MenuItem.Icon>
+                        <Image Style="{StaticResource stateImageStyle}" Source="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Click="StateMenuItem_Click" DataContext="{x:Static u:AvailabilityValues.Busy}" Header="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}">
+                    <MenuItem.Icon>
+                        <Image Style="{StaticResource stateImageStyle}" Source="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Click="StateMenuItem_Click" DataContext="{x:Static u:AvailabilityValues.DoNotDisturb}" Header="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}">
+                    <MenuItem.Icon>
+                        <Image Style="{StaticResource stateImageStyle}" Source="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Click="StateMenuItem_Click" DataContext="{x:Static u:AvailabilityValues.BeRightBack}" Header="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}">
+                    <MenuItem.Icon>
+                        <Image Style="{StaticResource stateImageStyle}" Source="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Click="StateMenuItem_Click" DataContext="{x:Static u:AvailabilityValues.Away}" Header="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}">
+                    <MenuItem.Icon>
+                        <Image Style="{StaticResource stateImageStyle}" Source="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Click="StateMenuItem_Click" DataContext="{x:Static u:AvailabilityValues.Offline}" Header="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}">
+                    <MenuItem.Icon>
+                        <Image Style="{StaticResource stateImageStyle}" Source="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}"></Image>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </ContextMenu>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!-- MENU -->
+        <Menu Grid.Row="0" BorderBrush="Gray" BorderThickness="1" Name="menu">
+            <MenuItem x:Uid="mm1" Header="Messenger">
+                <MenuItem Command="w:Commands.Login"></MenuItem>
+                <MenuItem Command="w:Commands.LoginAs"></MenuItem>
+                <MenuItem Command="w:Commands.Logout"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Command="w:Commands.Preferences"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Command="w:Commands.InvokeTuningWizard"></MenuItem>
+                <MenuItem Command="w:Commands.ResetTuningWizardSettings"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Command="w:Commands.Close"></MenuItem>
+            </MenuItem>
+            <MenuItem x:Uid="mm2" Header="View">
+                <MenuItem Command="w:Commands.ViewIncomingCalls"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Name="menuShowOffline" Command="w:MessengerCommands.ToggleShowOfflineContacts" IsCheckable="True"></MenuItem>
+                <MenuItem Name="menuShowGroups" Command="w:MessengerCommands.ToggleShowGroups" IsCheckable="True"></MenuItem>
+            </MenuItem>
+            <MenuItem x:Uid="mm3" Header="Contacts">
+                <MenuItem Command="w:MessengerCommands.FindContact"></MenuItem>
+                <MenuItem Command="w:MessengerCommands.AddContact"></MenuItem>
+                <MenuItem Command="w:MessengerCommands.RemoveContact"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Command="w:MessengerCommands.SendInstantMessage"></MenuItem>
+                <MenuItem Command="w:MessengerCommands.StartAudioConversation"></MenuItem>
+                <MenuItem Command="w:MessengerCommands.StartVideoConversation"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Command="w:MessengerCommands.SendFile"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Command="w:MessengerCommands.UserProperties"></MenuItem>
+            </MenuItem>
+            <MenuItem x:Uid="mm4" Header="Help">
+                <MenuItem Command="w:Commands.UccTracing"></MenuItem>
+                <Separator></Separator>
+                <!-- <MenuItem Command="w:Commands.Feedback"></MenuItem> -->
+                <MenuItem Command="w:Commands.Homepage"></MenuItem>
+                <MenuItem Command="w:Commands.About"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <!-- STATES -->
+        <Grid Grid.Row="1" Margin="0,4,0,4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!--<Button Grid.Column="0" Click="Button_Click">Refresh</Button>-->
+            <!--<TextBlock Grid.Column="0" Margin="2,0,4,0" FontSize="12" VerticalAlignment="Bottom">Connecting...</TextBlock>-->
+            <w:DropDownButton Grid.Column="1" x:Name="state">
+                <StackPanel Orientation="Horizontal" Width="140" DataContext="{Binding Mode=OneWay}">
+                    <!-- <ContentControl Margin="5,2,5,2" Template="{Binding Converter={StaticResource StateConverter}}" IsTabStop="False" /> -->
+                    <Image Margin="5,2,5,2" Width="16" Height="16" Source="{Binding Converter={StaticResource StateConverter}}"></Image>
+                    <TextBlock Margin="5,2,5,2" Text="{Binding Converter={StaticResource StateConverter}}"></TextBlock>
+                </StackPanel>
+                <w:DropDownButton.DropDown>
+                    <ContextMenu>
+                        <MenuItem Click="StateMenuItem_Click" DataContext="{x:Static u:AvailabilityValues.Online}" Header="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}">
+                            <MenuItem.Icon>
+                                <Image Style="{StaticResource stateImageStyle}" Source="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}"></Image>
+                                <!-- <ContentControl Margin="5,2,5,2" Template="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}" IsTabStop="False" /> -->
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Click="StateMenuItem_Click" DataContext="{x:Static u:AvailabilityValues.Busy}" Header="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}">
+                            <MenuItem.Icon>
+                                <Image Style="{StaticResource stateImageStyle}" Source="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}"></Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Click="StateMenuItem_Click" DataContext="{x:Static u:AvailabilityValues.DoNotDisturb}" Header="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}">
+                            <MenuItem.Icon>
+                                <Image Style="{StaticResource stateImageStyle}" Source="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}"></Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Click="StateMenuItem_Click" DataContext="{x:Static u:AvailabilityValues.BeRightBack}" Header="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}">
+                            <MenuItem.Icon>
+                                <Image Style="{StaticResource stateImageStyle}" Source="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}"></Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Click="StateMenuItem_Click" DataContext="{x:Static u:AvailabilityValues.Away}" Header="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}">
+                            <MenuItem.Icon>
+                                <Image Style="{StaticResource stateImageStyle}" Source="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}"></Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Click="StateMenuItem_Click" DataContext="{x:Static u:AvailabilityValues.Offline}" Header="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}">
+                            <MenuItem.Icon>
+                                <Image Style="{StaticResource stateImageStyle}" Source="{Binding Mode=OneTime, Converter={StaticResource StateConverter}}"></Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </ContextMenu>
+                </w:DropDownButton.DropDown>
+            </w:DropDownButton>
+        </Grid>
+        <!-- CONTACT LIST -->
+        <ListView Grid.Row="2" Name="ContactList" SizeChanged="ContactList_SizeChanged" SelectionChanged="ContactList_SelectionChanged">
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Command="w:MessengerCommands.SendInstantMessage"></MenuItem>
+                    <MenuItem Command="w:MessengerCommands.StartAudioConversation"></MenuItem>
+                    <MenuItem Command="w:MessengerCommands.StartVideoConversation"></MenuItem>
+                    <Separator />
+                    <MenuItem Command="w:MessengerCommands.SendFile"></MenuItem>
+                    <Separator />
+                    <MenuItem Command="w:MessengerCommands.UserProperties"></MenuItem>
+                    <Separator />
+                    <!-- Begin Groups -->
+                    <MenuItem x:Uid="cm1" Header="Group" ItemsSource="{Binding Path=GroupsMenuItems}">
+                        <MenuItem.ItemContainerStyle>
+                            <Style TargetType="MenuItem">
+                                <Setter Property="Header" Value="{Binding Path=Group, Converter={StaticResource GroupConverter}}"/>
+                                <Setter Property="IsChecked" Value="{Binding Path=IsChecked}"></Setter>
+                                <Setter Property="Tag" Value="{Binding Path=Group}"></Setter>
+                                <EventSetter Event="Click" Handler="SelectGroupMenuItem_Click"></EventSetter>
+                            </Style>
+                        </MenuItem.ItemContainerStyle>
+                    </MenuItem>
+                    <MenuItem x:Uid="cm2" Header="New Group" Click="NewGroupMenuItem_Click"></MenuItem>
+                    <!-- End Groups -->
+                    <Separator />
+                    <MenuItem Command="w:MessengerCommands.AddContact"></MenuItem>
+                    <MenuItem Command="w:MessengerCommands.RemoveContact"></MenuItem>
+                </ContextMenu>
+            </ListView.ContextMenu>
+            <ListView.View>
+                <GridView>
+                    <GridView.ColumnHeaderContainerStyle>
+                        <Style>
+                            <Setter Property="GridViewColumnHeader.Visibility" Value="Collapsed"></Setter>
+                        </Style>
+                    </GridView.ColumnHeaderContainerStyle>
+                    <GridViewColumn Header="Icon" Width="28">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <!-- <ContentControl Template="{Binding Path=Availability, Converter={StaticResource StateConverter}}" IsTabStop="False" /> -->
+                                <Image Width="14" Height="14" Opacity="0.75"  Source="{Binding Path=Availability, Converter={StaticResource StateConverter}}"></Image>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Path=DisplayNameOrAor}"></GridViewColumn>
+                    <GridViewColumn Header="Availability" Width="94" DisplayMemberBinding="{Binding Path=Availability, Converter={StaticResource StateConverter}, ConverterParameter=NoAppearOffline}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <EventSetter Event="MouseDoubleClick" Handler="ListContacts_Item_MouseDoubleClick"></EventSetter>
+                    <!-- <Setter Property="ContextMenu" Value="{StaticResource ItemContextMenu1}"></Setter> -->
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.ContainerStyle>
+                        <Style TargetType="{x:Type GroupItem}">
+                            <Setter Property="Margin" Value="0,0,0,5"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type GroupItem}">
+                                        <Expander Expanded="GroupExpander_Expanded" Collapsed="GroupExpander_Collapsed" Tag="{Binding Path=Name, Mode=OneTime}">
+                                            <Expander.IsExpanded>
+                                                <MultiBinding Mode="OneTime" Converter="{StaticResource GroupIsExpandedConverter}">
+                                                    <Binding Path="Name" Mode="OneWay"></Binding>
+                                                    <Binding Path="ExpandedGroups" Mode="OneWay" RelativeSource="{RelativeSource AncestorType={x:Type Window}}"></Binding>
+                                                </MultiBinding>
+                                            </Expander.IsExpanded>
+                                            <Expander.Header>
+                                                <DockPanel>
+                                                    <TextBlock FontWeight="Bold" Text="{Binding Path=Name, Converter={StaticResource GroupConverter}}" Margin="5,0,0,0" Width="100"/>
+                                                    <TextBlock FontWeight="Bold" Text="{Binding Path=ItemCount}"/>
+                                                </DockPanel>
+                                            </Expander.Header>
+                                            <Expander.Content>
+                                                <ItemsPresenter />
+                                            </Expander.Content>
+                                        </Expander>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </GroupStyle.ContainerStyle>
+                </GroupStyle>
+            </ListView.GroupStyle>
+        </ListView>
+    </Grid>
+</w:WindowEx>

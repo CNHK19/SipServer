@@ -1,0 +1,759 @@
+﻿            /*
+            Settings = null;
+
+            IUccSessionManager sessionManager = (IUccSessionManager)this.endpoint;
+
+            IUccSession session = sessionManager.CreateSession(UCC_SESSION_TYPE.UCCST_APPLICATION, null);
+
+            Helpers.Advise<_IUccSessionEvents>(session, this);
+
+            IUccSessionParticipant participant = session.CreateParticipant(UriManager.ParseUri(uri), null);
+
+            Helpers.Advise<_IUccSessionParticipantEvents>(participant, this);
+
+            IUccApplicationSessionParticipant appParcipant = (IUccApplicationSessionParticipant)participant;
+
+            Helpers.Advise<_IUccApplicationSessionParticipantEvents>(appParcipant, this);
+
+            session.AddParticipant(participant, null);
+            */
+            //appParcipant.ReNegotiate(null);
+
+            //(participant as IUccApplicationSessionParticipant).ReNegotiate(null);
+
+            
+        //IUccSession session;
+
+        IUccSignalingChannel channel;
+
+        public void Test()
+        {
+            UccSignalingRequest request = new UccSignalingRequestClass();
+            request.RequestType = UCC_SIGNALING_REQUEST_TYPE.UCCSRT_SERVICE;
+            request.Body = "<requestBody>test</requestBody>";
+
+            IUccSignalingChannelManager channelManager = (IUccSignalingChannelManager)this.endpoint;
+
+            channel = channelManager.CreateSignalingChannel(this.uri);//UriManager.ParseUri("sip:test@test.com"));
+			ComEvents.Advise<_IUccSignalingChannelEvents>(channel, this);
+            
+            channel.SendRequest(request, null);
+        }
+
+
+
+			IUccPublicationManager pubMan = (IUccPublicationManager)this.endpoint;
+
+            IUccCategoryInstance categoryInstance = pubMan.CreatePublishableCategoryInstance(
+                "state", 0, 0, UCC_CATEGORY_INSTANCE_EXPIRE_TYPE.UCCCIET_DEVICE, 2000);
+
+
+            IUccPresenceStateInstance stateInstance = (IUccPresenceStateInstance)categoryInstance;
+			stateInstance.Availability = (int)AvailabilityValues.Online;
+            stateInstance.Type = UCC_PRESENCE_STATE_TYPE.UCCPST_USER_STATE;
+
+            categoryInstance.PublicationOperation = UCC_PUBLICATION_OPERATION_TYPE.UCCPOT_ADD;
+            //categoryInstance.Value = "<test>123</test>";
+
+            IUccPublication publication = pubMan.CreatePublication();
+            //UCC_Advise<_IUccPublicationEvent>(publication, this);
+            publication.AddPublishableCategoryInstance(categoryInstance);
+
+            publication.Publish(null);
+
+
+		/*
+		public Endpoint(Object presenties)
+		{
+			ResetVars();
+
+			this.Presenties = presenties;
+		}
+		*/
+		/*
+		private void ResetVars()
+		{
+			this.IsDisabled = true;
+			this.availability = (int)AvailabilityValues.Online;
+			this.publicationState = PublicationStates.Pending;
+		}
+		*/
+		/*
+		public void Initialize(string applicatioName, string uri)
+        {
+			CleanUp();
+
+            this.Uri = uri;
+
+			this.platform = new UccPlatform();
+			Uccapi.ComEvents.Advise<_IUccPlatformEvents>(this.platform, this);
+
+            this.platform.Initialize(applicatioName, null);
+
+            //IUccTraceSettings traceSettings = (IUccTraceSettings)this.platform;
+            //traceSettings.EnableTracing();
+
+            this.endpoint = this.platform.CreateEndpoint(UCC_ENDPOINT_TYPE.UCCET_PRINCIPAL_SERVER_BASED, this.uri, null, null);
+			Uccapi.ComEvents.Advise<_IUccEndpointEvents>(this.endpoint, this);
+			Uccapi.ComEvents.Advise<_IUccSessionManagerEvents>(this.endpoint, this);
+
+            this.settings = (IUccServerSignalingSettings)this.endpoint;
+
+            //IUccPresenceCapabilities pc = (IUccPresenceCapabilities)this.endpoint;
+            //IUccMediaDeviceManager dm = (IUccMediaDeviceManager)this.platform;
+            //IUccMediaDeviceSettings ds = dm as IUccMediaDeviceSettings;
+            
+            //ds.InvokeTuningWizard(0, 0);
+            //UCC_SERVER_ENDPOINT_FLAGS flags;
+            //UCC_SERVER_ENDPOINT_FLAGS.UCCSEF_ENABLE_EVENT_LOGGING
+
+            IUccSessionManager sessionManager = (IUccSessionManager)this.endpoint;
+            sessionManager.RegisterSessionDescriptionEvaluator(this);
+
+		}
+
+		public string Uri
+		{
+			private set
+			{
+				this.uri = Helpers.ParseUri(Helpers.CorrectUri(value));
+			}
+			get
+			{
+				return this.uri.Value;
+			}
+		}
+
+		public Object Presenties
+		{
+			private set
+			{
+				if (value is IEnumerable && value is INotifyCollectionChanged)
+				{
+					this.presenties = value as IEnumerable;
+					(value as INotifyCollectionChanged).CollectionChanged += new NotifyCollectionChangedEventHandler(PresentiesCollectionChanged);
+				}
+				else
+				{
+					throw new ArgumentException("Presenties must implement IEnumerable, INotifyCollectionChanged interfaces");
+				}
+			}
+			get
+			{
+				return this.presenties;
+			}
+		}
+
+				public UCC_AUTHENTICATION_MODES AllowedAuthenticationModes
+				{
+					set
+					{
+						settings.AllowedAuthenticationModes = (int)value;
+					}
+					get
+					{
+						return (UCC_AUTHENTICATION_MODES)settings.AllowedAuthenticationModes;
+					}
+				}
+				public void SetSignalingServer(string serverAddress, UCC_TRANSPORT_MODE transport)
+				{
+					settings.Server = settings.CreateSignalingServer(serverAddress, transport);
+				}
+
+				public void SetCredential(string password, string realm)
+				{
+					SetCredential(this.uri.User, password, this.uri.Host, realm);
+				}
+
+				public void SetCredential(string userName, string password, string domain, string realm)
+				{
+					UccCredential credential = settings.CredentialCache.CreateCredential(userName, password, domain);
+					settings.CredentialCache.SetCredential(realm, credential);
+				}
+		*/
+
+
+            <!--
+            <ToggleButton Name="state" >
+                <StackPanel Orientation="Horizontal">
+                    <ContentControl Margin="5,2,5,2" Template="{Binding Converter={StaticResource StateConverter}}" IsTabStop="False" />
+                    <TextBlock Margin="5,2,5,2" Text="{Binding Converter={StaticResource StateConverter}}"></TextBlock>
+                </StackPanel>
+                <MenuItem Header="Online">
+                    <MenuItem Header="Online"></MenuItem>
+                    <MenuItem Header="Away"></MenuItem>
+                    <MenuItem Header="Delay"></MenuItem>
+                </MenuItem>
+            </ToggleButton>
+                -->
+            <!--
+            <ComboBox Grid.Column="1" Name="comboState" Width="140" VerticalAlignment="Bottom" >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <ContentControl Margin="5,2,5,2" Template="{Binding Converter={StaticResource StateConverter}}" IsTabStop="False" />
+                            <TextBlock Margin="5,2,5,2" Text="{Binding Converter={StaticResource StateConverter}}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            -->
+            
+            
+            
+            
+            		//		public static RoutedUICommand ShowOfflineContacts { get; private set; }
+		//		public static RoutedUICommand ShowGroups { get; private set; }
+
+
+
+		/*
+		private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (contactsView.GroupDescriptions.Count > 0)
+                contactsView.GroupDescriptions.Clear();
+            else
+                contactsView.GroupDescriptions.Add(new PropertyGroupDescription("Group"));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (contactsView.Filter == null)
+                contactsView.Filter = new Predicate<object>(FilterOffline);
+            else
+                contactsView.Filter = null;
+        }
+
+		private bool FilterOffline(object c)
+        {
+			return (c as Contact).IsOffline() == false;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (contactsView.SortDescriptions.Count > 0)
+                contactsView.SortDescriptions.Clear();
+            else
+            {
+                contactsView.SortDescriptions.Add(new SortDescription("Group", ListSortDirection.Ascending));
+                contactsView.SortDescriptions.Add(new SortDescription("Name", ListSortDirection.Ascending));
+            }
+        }
+		*/
+
+            
+            
+            
+            
+            
+            
+					/*
+                    endpoint.Initialize(AssemblyInfo.AssemblyProduct, Settings.Default.SignInAddress);
+
+                    endpoint.AllowedAuthenticationModes = UCC_AUTHENTICATION_MODES.UCCAM_NONE;
+
+                    if (Settings.Default.AuthKerberos)
+                        endpoint.AllowedAuthenticationModes |= UCC_AUTHENTICATION_MODES.UCCAM_KERBEROS;
+                    
+                    if (Settings.Default.AuthDigestNtlm)
+                    {
+                        endpoint.AllowedAuthenticationModes |= UCC_AUTHENTICATION_MODES.UCCAM_NTLM;
+                        endpoint.AllowedAuthenticationModes |= UCC_AUTHENTICATION_MODES.UCCAM_DIGEST;
+                        endpoint.SetCredential(Settings.Default.Password, Settings.Default.Realm);
+                    }
+
+                    endpoint.SetSignalingServer(Settings.Default.ServerAddress,
+                        (UCC_TRANSPORT_MODE)Settings.Default.IpProtocol);
+
+                    endpoint.BeginLogin();
+					*/
+
+
+
+
+
+
+/*
+	enum PublicationStates
+	{
+		Initial,
+		AddPending,
+		AddFailed,
+		UpdatePending,
+		UpdateFailed,
+		Published
+	}
+*/
+
+
+            // вызывается до того как сессия фактически установлена!
+            /*
+            foreach (IUccSessionParticipant p in eventData.Session.Participants)
+            {
+                if (p.IsLocal == false)
+                {
+                    IUccSignalingChannel channel = (IUccSignalingChannel)p;
+                    Helpers.Advise<_IUccSignalingChannelEvents>(channel, this);
+                    UccSignalingRequest request = new UccSignalingRequestClass();
+                    //request.RequestType = UCC_SIGNALING_REQUEST_TYPE.UCCSRT_SUBSCRIBE;
+                    request.Body = "<requestBody>...</requestBody>";
+                    channel.SendRequest(request, null);
+                }
+            }
+            */
+
+
+		
+		public static UIElement cloneElement(string s)
+		{
+			StringReader stringReader = new StringReader(s);
+
+			XmlReader xmlReader = XmlTextReader.Create(stringReader, new XmlReaderSettings());
+
+			return (UIElement)XamlReader.Load(xmlReader);
+		}
+
+		public static UIElement cloneElement(UIElement orig)
+		{
+			if (orig == null)
+
+				return (null);
+
+			string s = XamlWriter.Save(orig);
+
+			StringReader stringReader = new StringReader(s);
+
+			XmlReader xmlReader = XmlTextReader.Create(stringReader, new XmlReaderSettings());
+
+			return (UIElement)XamlReader.Load(xmlReader);
+
+		}
+
+
+
+
+
+    <!--
+    <Window.Resources>
+        <TabItem x:Key="TabItem">
+            <TabItem.Header>
+                <StackPanel Orientation="Horizontal">
+                    <ContentControl Template="{StaticResource RedBall}" IsTabStop="False" />
+                    <TextBlock Margin="3 0 3 0">Stranger</TextBlock>
+                    <c:CloseTabButton Click="CloseTabButton_Click"></c:CloseTabButton>
+                </StackPanel>
+            </TabItem.Header>
+            <TabItem.Content>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition MinHeight="40" Height="*"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition MinHeight="40" Height="60"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="26"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <RichTextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" IsReadOnly="True" VerticalScrollBarVisibility="Auto"></RichTextBox>
+                    <GridSplitter Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="3" VerticalAlignment="Center" HorizontalAlignment="Stretch" ShowsPreview="False"></GridSplitter>
+                    <RichTextBox Grid.Row="2" Grid.Column="0" VerticalScrollBarVisibility="Auto"></RichTextBox>
+                    <Button Grid.Row="2" Grid.Column="1">
+                        <Button.Content>
+                            <TextBlock>
+                                <TextBlock.LayoutTransform>
+                                    <RotateTransform Angle="270"></RotateTransform>
+                                </TextBlock.LayoutTransform>
+                                <TextBlock.Text>Send</TextBlock.Text>
+                            </TextBlock>
+                        </Button.Content>
+                    </Button>
+                </Grid>
+            </TabItem.Content>
+        </TabItem>
+    </Window.Resources>
+    -->
+
+
+
+
+
+        <!--
+        <TabItem>
+            <TabItem.Header>
+                <StackPanel Orientation="Horizontal">
+                    <ContentControl Template="{StaticResource RedBall}" IsTabStop="False" />
+                    <TextBlock Margin="3 0 3 0">Stranger</TextBlock>
+                    <c:CloseTabButton Click="CloseTabButton_Click"></c:CloseTabButton>
+                </StackPanel>
+            </TabItem.Header>
+            <TabItem.Content>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition MinHeight="40" Height="*"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition MinHeight="40" Height="60"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition Width="26"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <RichTextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" IsReadOnly="True" VerticalScrollBarVisibility="Auto"></RichTextBox>
+                    <GridSplitter Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="3" VerticalAlignment="Center" HorizontalAlignment="Stretch" ShowsPreview="False"></GridSplitter>
+                    <RichTextBox Grid.Row="2" Grid.Column="0" VerticalScrollBarVisibility="Auto"></RichTextBox>
+                    <Button Grid.Row="2" Grid.Column="1">
+                        <Button.Content>
+                            <TextBlock>
+                                <TextBlock.LayoutTransform>
+                                    <RotateTransform Angle="270"></RotateTransform>
+                                </TextBlock.LayoutTransform>
+                                <TextBlock.Text>Send</TextBlock.Text>
+                            </TextBlock>
+                        </Button.Content>                      
+                    </Button>
+                </Grid>
+            </TabItem.Content>
+        </TabItem>
+        <TabItem>
+            <TabItem.Header>
+                <StackPanel Orientation="Horizontal">
+                    <ContentControl Template="{StaticResource GreenBall}" />
+                    <TextBlock Margin="3 0 3 0">Immortal</TextBlock>
+                    <c:CloseTabButton></c:CloseTabButton>
+                </StackPanel>
+            </TabItem.Header>
+            <TabItem.Content>
+                2
+            </TabItem.Content>
+        </TabItem>
+        <w:ChatTabItem></w:ChatTabItem>
+        <w:ChatTabItem></w:ChatTabItem>
+        <w:ChatTabItem></w:ChatTabItem>
+        <w:ChatTabItem></w:ChatTabItem>
+        -->
+        <!--
+        <StaticResourceExtension ResourceKey="TabItem"></StaticResourceExtension>
+        <DynamicResourceExtension ResourceKey="TabItem" />
+        -->
+
+
+
+
+
+
+		//public override string Uri
+		//{
+		//    get
+		//    {
+		//        return this.uri;
+		//    }
+		//}
+
+		//public string NakedUri
+		//{
+		//    get
+		//    {
+		//        return Uccapi.Helpers.NakeUri(this.uri);
+		//    }
+		//}
+
+		//public override string DisplayName
+		//{
+		//    get
+		//    {
+		//        if (string.IsNullOrEmpty(this.displayName))
+		//            return this.NakedUri;
+		//        return this.displayName;
+		//    }
+		//    set
+		//    {
+		//        if (value != displayName)
+		//        {
+		//            displayName = value;
+		//            OnPropertyChanged("DisplayName");
+		//        }
+		//    }
+		//}
+
+		//public override AvailabilityValues Availability 
+		//{
+		//    get
+		//    {
+		//        return this.availability;
+		//    }
+		//    protected set
+		//    {
+		//        if (value != this.availability)
+		//        {
+		//            this.availability = value;
+		//            OnPropertyChanged("Availability");
+		//        }
+		//    }
+		//}
+
+
+
+
+
+		//public abstract string Uri { get; }
+		//public abstract string DisplayName { get; set; }
+		//public abstract AvailabilityValues Availability { get; protected set; }
+
+
+
+
+        #region _IUccSessionEvents
+        /// <summary>
+        /// Handle OnAddParticipant events. Display when it fails to add the participant.
+        /// </summary>
+        /// <param name="eventSource"></param>
+        /// <param name="eventData"></param>
+        void _IUccSessionEvents.OnAddParticipant(
+                        IUccSession eventSource,
+                        IUccOperationProgressEvent eventData)
+        {
+            //System.Windows.MessageBox.Show("OnAddParticipant");
+            /*
+            if (eventData.IsComplete && eventData.StatusCode < 0)
+            {
+                switch (eventSource.Type)
+                {
+                    case UCC_SESSION_TYPE.UCCST_INSTANT_MESSAGING:
+                    case UCC_SESSION_TYPE.UCCST_AUDIO_VIDEO:
+                    default:
+                        System.Windows.MessageBox.Show("OnAddParticipant failed.");
+                        break;
+                }
+            }
+            */
+            if (eventData.IsComplete && eventData.StatusCode >= 0)
+            {
+                /*
+                if (eventSource.Type == UCC_SESSION_TYPE.UCCST_APPLICATION)
+                {
+                    foreach (IUccSessionParticipant p in eventSource.Participants)
+                    {
+                        if (p.IsLocal == false)
+                        {
+                            IUccSignalingChannel channel = (IUccSignalingChannel)p;
+                            Helpers.Advise<_IUccSignalingChannelEvents>(channel, this);
+                            UccSignalingRequest request = new UccSignalingRequestClass();
+                            request.RequestType = UCC_SIGNALING_REQUEST_TYPE.UCCSRT_INFO;
+                            request.Body = "<requestBody>fuck</requestBody>";
+                            channel.SendRequest(request, null);
+                            System.Windows.MessageBox.Show("send request");
+                        }
+                    }
+                }
+                */
+            }
+        }
+
+        void _IUccSessionEvents.OnRemoveParticipant(
+                      IUccSession eventSource,
+                      IUccOperationProgressEvent eventData)
+        {
+        }
+
+        void _IUccSessionEvents.OnTerminate(
+                  IUccSession eventSource,
+                  IUccOperationProgressEvent eventData)
+        {
+        }
+
+        #endregion _IUccSessionEvents
+
+
+
+
+        #region _IUccSessionParticipantEvents
+
+        void _IUccSessionParticipantEvents.OnAddParticipantEndpoint(
+            IUccSessionParticipant eventSource,
+            IUccOperationProgressEvent eventData)
+        {
+        }
+
+        void _IUccSessionParticipantEvents.OnRemoveParticipantEndpoint(
+            IUccSessionParticipant eventSource,
+            IUccOperationProgressEvent eventData)
+        {
+        }
+
+        void _IUccSessionParticipantEvents.OnStateChanged(
+            IUccSessionParticipant eventSource,
+            UccSessionParticipantStateChangedEvent eventData)
+        {
+            System.Windows.MessageBox.Show(eventData.NewState.ToString());
+
+            switch (eventData.NewState)
+            {
+                case UCC_SESSION_ENTITY_STATE.UCCSES_CONNECTING:
+                case UCC_SESSION_ENTITY_STATE.UCCSES_DISCONNECTING:
+                case UCC_SESSION_ENTITY_STATE.UCCSES_DISCONNECTED:
+                case UCC_SESSION_ENTITY_STATE.UCCSES_IDLE:
+                    break;
+                case UCC_SESSION_ENTITY_STATE.UCCSES_CONNECTED:
+                    /*
+                    IUccSignalingChannel channel = (IUccSignalingChannel)eventSource;
+                    Helpers.Advise<_IUccSignalingChannelEvents>(channel, this);
+                    UccSignalingRequest request = new UccSignalingRequestClass();
+                    //request.RequestType = UCC_SIGNALING_REQUEST_TYPE.UCCSRT_SUBSCRIBE;
+                    request.Body = "<requestBody>...</requestBody>";
+                    channel.SendRequest(request, null);
+                    */
+                    break;
+            }
+        }
+
+        #endregion _IUccSessionParticipantEvents
+
+
+	
+		/*
+		private int AvailabilityInt
+		{
+			get
+			{
+				return this.Availability;
+			}
+			set
+			{
+				if (this.SetAvailability(value))
+					this.Publish();
+			}
+		}
+		
+		private bool SetAvailability(int value)
+		{
+			return this.SetAvailability(value, this.IsEnabled);
+		}
+
+		private bool SetAvailability(int value, bool conditon)
+		{
+			if (conditon && this.availability != value)
+			{
+				this.availability = value;
+				if (AvailabilityUpdated != null)
+					AvailabilityUpdated(this, null);
+				return true;
+			}
+			return false;
+		}
+		*/
+		/*
+		public AvailabilityValues Availability
+		{
+			get 
+			{
+				return AvailabilityHelper.ConvertFromInt(this.AvailabilityInt); 
+			}
+			set
+			{
+				this.AvailabilityInt = (int)value;
+			}
+		}
+		*/
+		/*
+		public void SetAvailability(AvailabilityValues availability)
+		{
+			if (this.IsEnabled && this.Availability != availability)
+			{
+				this.Availability = availability;
+				this.Publish();
+			}
+		}
+		private bool SetAvailability(AvailabilityValues availability, bool conditon)
+		{
+			if (conditon && this.Availability != availability)
+			{
+				this.Availability = availability;
+			}
+		}
+
+		private bool SetAvailability(int value)
+		{
+			return this.SetAvailability(value, this.IsEnabled);
+		}
+
+		private bool SetAvailability(int value, bool conditon)
+		{
+			if (conditon && this.availability != value)
+			{
+				this.availability = value;
+				if (AvailabilityUpdated != null)
+					AvailabilityUpdated(this, null);
+				return true;
+			}
+			return false;
+		}
+		*/
+		
+		
+					//this.SetAvailability((int)this.selfPresentity.Availability);
+
+
+		/*
+public event CancelEventHandler CancelSetAvailability;
+
+	public void SetAvailability(AvailabilityValues availability)
+	{
+		CancelEventArgs cancelEventArgs = new CancelEventArgs();
+		if (this.CancelSetAvailability != null)
+			this.CancelSetAvailability(this, cancelEventArgs);
+
+		if (cancelEventArgs.Cancel == false)
+			base.Availability = availability;
+	}
+	*/
+
+
+
+		/*
+		private IImSession CreateImSession(IUccSession uccSession)
+		{
+			ImSession session = new ImSession(this.selfPresentity);
+			session.UccSession = uccSession;
+			this.Sessions.Add(session);
+
+			return session;
+		}
+
+		public IImSession CreateImSession()
+		{
+			return this.CreateImSession(
+				this.sessionManager.CreateSession(UCC_SESSION_TYPE.UCCST_INSTANT_MESSAGING, null)
+				);
+		}
+
+		private IAvSession CreateAvSession(IUccSession uccSession)
+		{
+			AvSession session = new AvSession(this.selfPresentity);
+			session.UccSession = uccSession;
+			this.Sessions.Add(session);
+
+			return session;
+		}
+
+		public IAvSession CreateAvSession()
+		{
+			return this.CreateAvSession(
+				this.sessionManager.CreateSession(UCC_SESSION_TYPE.UCCST_AUDIO_VIDEO, null)
+				);
+		}
+		*/
+
+
+    <!--
+	public static LoginViewModel ViewModel = new LoginViewModel();
+    DataContext="{x:Static v:LoginViewModel.ViewModel}"
+    <Window.Resources>
+        <ObjectDataProvider x:Key="WindowStyles" MethodName="GetValues" ObjectType="{x:Type sys:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="WindowStyle" />
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+    </Window.Resources>
+    -->
+    <!--
+            <CheckBox Name="useDefaultCredential" IsChecked="{Binding Path=UseDefaultCredential}">Use the current user credential</CheckBox>
+            -->

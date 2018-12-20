@@ -1,0 +1,65 @@
+﻿<Window x:Class="Messenger.Windows.AddContact"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:w="clr-namespace:Messenger.Windows"
+    Title="Add Contact" Width="300" SnapsToDevicePixels="True" WindowStartupLocation="CenterScreen"
+    SizeToContent="Height" ResizeMode="NoResize" Loaded="Window_Loaded" x:Name="RootElement" x:Uid="w7">
+    <Window.CommandBindings>
+        <!--
+        <CommandBinding Command="w:Commands.Ok" Executed="OkBinding_Executed" CanExecute="OkBinding_CanExecute"></CommandBinding>
+        -->
+        <CommandBinding Command="w:Commands.Cancel" Executed="CancelBinding_Executed"></CommandBinding>
+    </Window.CommandBindings>
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBox}">
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors)[0].ErrorContent}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <!--
+    <Window.BindingGroup>
+        <BindingGroup>
+            <BindingGroup.ValidationRules>
+            </BindingGroup.ValidationRules>
+        </BindingGroup>
+    </Window.BindingGroup>
+    -->
+    <StackPanel Style="{StaticResource MainPanel}">
+        <TextBlock x:Uid="i1">Uri:</TextBlock>
+        <TextBox x:Name="ur">
+            <TextBox.Text>
+                <Binding Path="Uri" NotifyOnValidationError="True" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <w:UriValidationRule ValidatesOnTargetUpdated="True" />
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBlock x:Uid="i2">Group:</TextBlock>
+        <TextBox MaxLength="31">
+            <TextBox.Text>
+                <Binding Path="Group" NotifyOnValidationError="True" UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <w:GroupValidationRule ValidatesOnTargetUpdated="True" />
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <!--
+        <Label Grid.Row="2" Grid.ColumnSpan="2" Foreground="Red"
+            Content="{Binding Path=(Validation.Errors)[0].ErrorContent,
+            ElementName=RootElement}"/>
+        -->
+        <StackPanel Style="{StaticResource OkCancelPanel}">
+            <Button Command="w:Commands.Cancel" IsCancel="True" Style="{StaticResource OkCancelButton}" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"></Button>
+            <!--
+            <Button Command="w:Commands.Ok" Name="ok" IsDefault="True" Style="{StaticResource OkCancelButton}" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"></Button>
+            <Button IsCancel="True" Style="{StaticResource OkCancelButton}" Click="Cancel_Click">Cancel</Button>
+            -->
+            <Button IsDefault="True" Name="ok" Style="{StaticResource OkCancelButton}" Click="Ok_Click" Content="{Binding Source={x:Static w:Commands.Ok}, Path=Text}"></Button>
+        </StackPanel>
+    </StackPanel>
+</Window>

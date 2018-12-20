@@ -1,0 +1,57 @@
+﻿<w:WindowEx x:Class="Messenger.Windows.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:w="clr-namespace:Messenger.Windows"
+    xmlns:m="clr-namespace:Messenger"
+    Title="About" SizeToContent="Height" Width="332" ResizeMode="NoResize" SnapsToDevicePixels="True"
+    WindowStartupLocation="CenterScreen" x:Uid="w3">
+    <Window.CommandBindings>
+        <CommandBinding Command="w:Commands.Ok" Executed="OkBinding_Executed"></CommandBinding>
+    </Window.CommandBindings>
+    <Grid>
+        <!-- SOFTPHONE -->
+        <StackPanel Style="{StaticResource MainPanel}">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontWeight="Bold" Text="{x:Static m:AssemblyInfo.AssemblyProduct}"></TextBlock>
+                <TextBlock FontWeight="Bold" Text="{x:Static m:AssemblyInfo.AssemblyVersion}" Margin="5,0,0,0"></TextBlock>
+            </StackPanel>
+            <TextBlock Margin="0,10,0,0"><TextBlock x:Uid="tb1">Homepage:</TextBlock>
+                <Hyperlink Command="w:Commands.Homepage"><TextBlock Text="{x:Static m:AssemblyInfo.Homepage}"></TextBlock></Hyperlink></TextBlock>
+            <TextBlock Margin="0,10,0,0" Text="{x:Static m:AssemblyInfo.AssemblyCopyright}">.</TextBlock>
+            <TextBlock x:Uid="tb2">All rights reserved.</TextBlock>
+            <StackPanel Style="{StaticResource OkCancelPanel}">
+                <Button Command="w:Commands.Ok" IsDefault="True" Style="{StaticResource OkCancelButton}" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"></Button>
+            </StackPanel>
+        </StackPanel>
+        <Canvas Name="animCanvas" Margin="0,0,40,40">
+            <Image Width="40" Height="40" Name="online" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Image.Triggers>
+                    <EventTrigger RoutedEvent="Window.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard Storyboard.TargetName="online">
+                                <DoubleAnimation 
+                                    Storyboard.TargetProperty="(Canvas.Opacity)"
+                                    From="0.0" To="0.5" Duration="0:0:6" AutoReverse="True" RepeatBehavior="Forever" />
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Source" RepeatBehavior="Forever">
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{StaticResource presenceOnline}"></DiscreteObjectKeyFrame>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:12" Value="{StaticResource presenceAway}"></DiscreteObjectKeyFrame>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:24" Value="{StaticResource presenceIdleOnline}"></DiscreteObjectKeyFrame>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:36" Value="{StaticResource presenceIdleBusy}"></DiscreteObjectKeyFrame>
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:48" Value="{StaticResource presenceDnd}"></DiscreteObjectKeyFrame>
+                                    <DiscreteObjectKeyFrame KeyTime="0:1:00" Value="{StaticResource presenceOffline}"></DiscreteObjectKeyFrame>
+                                    <DiscreteObjectKeyFrame KeyTime="0:1:12" Value="{StaticResource presenceUnknown}"></DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                                <DoubleAnimation 
+                                    Storyboard.TargetProperty="(Canvas.Top)"
+                                    From="0" To="{Binding ElementName=animCanvas, Path=ActualHeight}" Duration="0:0:2.9" AutoReverse="True" RepeatBehavior="Forever" />
+                                <DoubleAnimation 
+                                    Storyboard.TargetProperty="(Canvas.Left)"
+                                    From="0" To="{Binding ElementName=animCanvas, Path=ActualWidth}" Duration="0:0:8.4" AutoReverse="True" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Image.Triggers>
+            </Image>
+        </Canvas>
+    </Grid>
+</w:WindowEx>

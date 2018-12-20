@@ -1,0 +1,53 @@
+﻿<!-- SOFTPHONE -->
+<Application x:Class="Messenger.Programme"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:w="clr-namespace:Messenger.Windows"
+    Startup="Application_Startup" ShutdownMode="OnMainWindowClose">
+    <!-- SOFTPHONE -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="PresenceImages.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <w:StateConverter x:Key="StateConverter"></w:StateConverter>
+            <w:ParticipantStateConverter x:Key="ParticipantStateConverter"></w:ParticipantStateConverter>
+            <w:VisibilityConverter x:Key="VisibilityConverter"></w:VisibilityConverter>
+            <w:InverseConverter x:Key="InverseConverter"></w:InverseConverter>
+            <w:EndpointStatusConverter x:Key="EndpointStatusConverter"></w:EndpointStatusConverter>
+            <w:PriorityMultiConverter x:Key="PriorityMultiConverter"></w:PriorityMultiConverter>
+            <Style x:Key="OkCancelPanel">
+                <Setter Property="StackPanel.Margin" Value="0 10 0 0"></Setter>
+                <Setter Property="StackPanel.Orientation" Value="Horizontal"></Setter>
+                <Setter Property="StackPanel.HorizontalAlignment" Value="Right"></Setter>
+            </Style>
+            <Style x:Key="OkCancelButton">
+                <Setter Property="Button.Width" Value="60"></Setter>
+                <Setter Property="Button.Margin" Value="4 0 0 0"></Setter>
+            </Style>
+            <Style x:Key="MainPanel">
+                <Setter Property="Panel.Margin" Value="5"></Setter>
+            </Style>
+            <CommandBindingCollection x:Key="GlobalCommands">
+                <CommandBinding Command="w:Commands.About" Executed="AboutBinding_Executed"></CommandBinding>
+                <CommandBinding Command="w:Commands.Homepage" Executed="HomepageBinding_Executed"></CommandBinding>
+                <CommandBinding Command="w:Commands.Feedback" Executed="FeedbackBinding_Executed"></CommandBinding>
+                <CommandBinding Command="w:Commands.Preferences" Executed="PreferencesBinding_Executed"></CommandBinding>
+                <CommandBinding Command="w:Commands.InvokeTuningWizard" Executed="InvokeTuningWizardBinding_Executed"></CommandBinding>
+                <CommandBinding Command="w:Commands.ResetTuningWizardSettings" Executed="ResetTuningWizardSettingsBinding_Executed"></CommandBinding>
+                <CommandBinding Command="w:Commands.UccTracing" Executed="UccTracingBinding_Executed"></CommandBinding>
+                <CommandBinding Command="w:Commands.Login" Executed="LoginBinding_Executed" CanExecute="LoginBinding_CanExecute"></CommandBinding>
+                <CommandBinding Command="w:Commands.LoginAs" Executed="LoginAsBinding_Executed" CanExecute="LoginBinding_CanExecute"></CommandBinding>
+                <CommandBinding Command="w:Commands.Logout" Executed="LogoutBinding_Executed" CanExecute="LogoutBinding_CanExecute"></CommandBinding>
+                <CommandBinding Command="w:Commands.CopyAll" Executed="CopyAllBinding_Executed" CanExecute="CopyAllBinding_CanExecute"></CommandBinding>
+                <CommandBinding Command="w:Commands.Close" Executed="CloseBinding_Executed"></CommandBinding>
+                <CommandBinding Command="w:Commands.ViewIncomingCalls" Executed="ViewIncomingCallsBinding_Executed" CanExecute="ViewIncomingCallsBinding_CanExecute"></CommandBinding>
+                <CommandBinding Command="w:Commands.Call" Executed="CallBinding_Executed" CanExecute="CallBinding_CanExecute"></CommandBinding>
+                <CommandBinding Command="w:Commands.HangUp" Executed="HangUpBinding_Executed" CanExecute="HangUpBinding_CanExecute"></CommandBinding>
+                <CommandBinding Command="w:Commands.RemoveAll" Executed="RemoveAllBinding_Executed" CanExecute="RemoveAllBinding_CanExecute"></CommandBinding>
+            </CommandBindingCollection>
+        </ResourceDictionary>
+    </Application.Resources>
+    <!-- SOFTPHONE -->
+</Application>
+<!-- SOFTPHONE -->

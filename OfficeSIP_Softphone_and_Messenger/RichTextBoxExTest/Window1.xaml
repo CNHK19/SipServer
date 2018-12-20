@@ -1,0 +1,60 @@
+﻿<Window x:Class="RichTextBoxExTest.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:r="clr-namespace:RichTextBoxEx;assembly=RichTextBoxEx"
+    xmlns:r2="clr-namespace:ImageSnappingToPixels;assembly=RichTextBoxEx"
+    Title="Window1" Height="500" Width="543" SnapsToDevicePixels="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--
+        <r2:Bitmap Grid.Row="3">
+            <r2:Bitmap.Source>
+                <BitmapImage UriSource="C:\Projects\OfficeSIP\Messenger\Emoticons\Emoticons - Yahoo! Messenger_files\1.gif"></BitmapImage>
+            </r2:Bitmap.Source>
+        </r2:Bitmap>
+        -->
+        <r:RichTextBoxEx Grid.Row="0" x:Name="richex" SnapsToDevicePixels="True" SpellCheck.IsEnabled="True">
+            <r:RichTextBoxEx.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </r:RichTextBoxEx.Resources>
+            <r:RichTextBoxEx.Document>
+                <FlowDocument>
+                    <Paragraph>
+                        123 :)
+                        <!--
+                        <r:AnimatedImage x:Name="sm1" SnapsToDevicePixels="True" AnimatedBitmap="{x:Static r:Resources._1}"></r:AnimatedImage>
+                        -->
+                        <!--
+                        <InlineUIContainer>
+                            <r2:Bitmap Source="{x:Static r:Resources._1}"></r2:Bitmap>
+                        </InlineUIContainer>-->
+                        321
+                    </Paragraph>
+                </FlowDocument>
+            </r:RichTextBoxEx.Document>
+        </r:RichTextBoxEx>
+        <Button Grid.Row="1" Click="InsertSelected_Click">Insert Selected</Button>
+        <r:RichTextBoxEx Grid.Row="2" x:Name="dest" SnapsToDevicePixels="True" FontFamily="Arial" FontSize="32">
+        </r:RichTextBoxEx>
+        <r:RichTextBoxEx Grid.Row="3" IsReadOnly="True">
+            <r:RichTextBoxEx.Document>
+                <FlowDocument>
+                    <Paragraph>123 :) 321</Paragraph>
+                </FlowDocument>
+            </r:RichTextBoxEx.Document>
+        </r:RichTextBoxEx>
+        <!--
+        <Button Grid.Row="3" Margin="30,0,0,0" Click="Button_Click">Invalidate</Button>
+        -->
+        <TextBox Grid.Row="4" TextWrapping="WrapWithOverflow" x:Name="console1">
+        </TextBox>
+    </Grid>
+</Window>

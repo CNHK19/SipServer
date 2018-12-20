@@ -1,0 +1,45 @@
+﻿<w:WindowEx x:Class="Messenger.Windows.SelectFiles"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:w="clr-namespace:Messenger.Windows"
+    Title="AssemblyTitle - Select Files" SnapsToDevicePixels="True" SizeToContent="WidthAndHeight" 
+    ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen" x:Uid="w14">
+    <StackPanel Style="{StaticResource MainPanel}">
+        <Label>
+            <TextBlock><Span x:Uid="i1_1">The user</Span>
+            <TextBlock Text="{Binding Username}" FontStyle="Italic"></TextBlock> (<TextBlock Text="{Binding Uri}" FontStyle="Italic"></TextBlock>) 
+                <Span x:Uid="i1_2">send files to you, do you accept these files?</Span></TextBlock>
+        </Label>
+        <ListView ItemsSource="{Binding Path=Files}" MaxHeight="300">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Accept" x:Uid="c1">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding Path=IsAccepted, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></CheckBox>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Name" Width="240" DisplayMemberBinding="{Binding Path=Value.FileName}" x:Uid="c2"></GridViewColumn>
+                    <GridViewColumn Header="Size" Width="100" DisplayMemberBinding="{Binding Path=FileSize}" x:Uid="c3"></GridViewColumn>
+                    <GridViewColumn Header="Exist" Width="50" x:Uid="c4">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock ToolTip="{Binding OldFileInfo}" Foreground="Red" Text="{Binding Path=FileExist, Mode=OneWay}"></TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Uid="i2">Download folder:</Label>
+        <DockPanel>
+            <Button DockPanel.Dock="Right" Click="Select_Click" x:Uid="b1">Select</Button>
+            <TextBox DockPanel.Dock="Left" IsReadOnly="True" Text="{Binding DownloadPath}"></TextBox>
+        </DockPanel>
+        <StackPanel Style="{StaticResource OkCancelPanel}">
+            <Button Style="{StaticResource OkCancelButton}" Click="Accept_Click" x:Uid="b2">Accept</Button>
+            <Button Style="{StaticResource OkCancelButton}" Click="Reject_Click" x:Uid="b3">Reject</Button>
+        </StackPanel>
+    </StackPanel>
+</w:WindowEx>

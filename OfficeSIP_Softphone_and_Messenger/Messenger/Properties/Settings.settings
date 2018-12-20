@@ -1,0 +1,129 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Messenger.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Top" Roaming="true" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="Left" Roaming="true" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="Width" Roaming="true" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">280</Value>
+    </Setting>
+    <Setting Name="Height" Roaming="true" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">430</Value>
+    </Setting>
+    <Setting Name="AuthKerberosNtlm" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AuthDigest" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AutoConfigServer" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Password" Roaming="true" Type="System.String" Scope="User">
+      <Value Profile="(Default)">pass</Value>
+    </Setting>
+    <Setting Name="IpProtocol" Roaming="true" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="ReviewLogin" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Realm" Roaming="true" Type="System.String" Scope="User">
+      <Value Profile="(Default)">*</Value>
+    </Setting>
+    <Setting Name="EndpointId" Roaming="true" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">-1</Value>
+    </Setting>
+    <Setting Name="SettingsUpgrated" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="LoginAtStartup" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="RunMinimized" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MinimizeOnClose" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AlwaysOnTop" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="IncomingMessageSound" Roaming="true" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sounds\imessage.wav</Value>
+    </Setting>
+    <Setting Name="OutgoingMessageSound" Roaming="true" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sounds\omessage.wav</Value>
+    </Setting>
+    <Setting Name="IncomingCallSound" Roaming="true" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sounds\call.wav</Value>
+    </Setting>
+    <Setting Name="NoSplash" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="RestoreConnection" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AutoAway" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AutoAwaySeconds" Roaming="true" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">300</Value>
+    </Setting>
+    <Setting Name="ServerAddress" Roaming="true" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="ShowOffline" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowGroups" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ExpandedGroups" Roaming="true" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TopChat" Roaming="true" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="LeftChat" Roaming="true" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">290</Value>
+    </Setting>
+    <Setting Name="WidthChat" Roaming="true" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">408</Value>
+    </Setting>
+    <Setting Name="HeightChat" Roaming="true" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">338</Value>
+    </Setting>
+    <Setting Name="Username" Roaming="true" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UseDefaultCredential" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="UseSpecifiedCredential" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ViewSessionDetails" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ViewLocalVideo" Roaming="true" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="VideoSize" Roaming="true" Type="System.Windows.Size" Scope="User">
+      <Value Profile="(Default)">0,0</Value>
+    </Setting>
+    <Setting Name="LeftAvChat" Roaming="true" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="TopAvChat" Roaming="true" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="DownloadPath" Roaming="true" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

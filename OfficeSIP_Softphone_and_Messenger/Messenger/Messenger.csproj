@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6BCD3CC5-B4DA-4422-A1A1-DD0127240A2E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Messenger</RootNamespace>
+    <AssemblyName>Messenger</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ApplicationManifest>Messenger.manifest</ApplicationManifest>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>Icons\VideoChat.ico</ApplicationIcon>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <UICulture>en-US</UICulture>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.UccApi, Version=2.0.6362.123, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Windows.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.Windows.Design.Extensibility, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.Windows.Design.Interaction, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.Windows.Design.Markup, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="Programme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="..\Softphone\Windows\About.xaml">
+      <Link>Windows\About.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\Softphone\Windows\Disconnect.xaml">
+      <Link>Windows\Disconnect.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\Softphone\Windows\Invite.xaml">
+      <Link>Windows\Invite.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\Softphone\Windows\Login.xaml">
+      <Link>Windows\Login.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\Softphone\Windows\UccTracing.xaml">
+      <Link>Windows\UccTracing.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\CloseTabButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\SoundFileBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Icons\PresenceImages.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\AddContact.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AvChat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ChatTabItemContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ChatTabItemHeader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Crash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Crash2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\FindContact.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GlassBalls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Chat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Contacts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <None Include="Garbage\Window1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </None>
+    <Page Include="Windows\NewGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Preferences.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SelectFiles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UserProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Programme.xaml.cs">
+      <DependentUpon>Programme.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="Garbage\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Garbage\ComEvents.cs" />
+    <Compile Include="..\Softphone\DispatcherHelper.cs">
+      <Link>DispatcherHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Softphone\Programme.Shared.Tasks.cs">
+      <Link>Programme.Shared.Tasks.cs</Link>
+    </Compile>
+    <Compile Include="..\Softphone\Windows\About.xaml.cs">
+      <Link>Windows\About.xaml.cs</Link>
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\Softphone\Windows\Commands.cs">
+      <Link>Windows\Commands.cs</Link>
+    </Compile>
+    <Compile Include="..\Softphone\Windows\Disconnect.xaml.cs">
+      <Link>Windows\Disconnect.xaml.cs</Link>
+      <DependentUpon>Disconnect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\Softphone\Windows\Invite.xaml.cs">
+      <Link>Windows\Invite.xaml.cs</Link>
+      <DependentUpon>Invite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\Softphone\Windows\Login.xaml.cs">
+      <Link>Windows\Login.xaml.cs</Link>
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\Softphone\Windows\ParameterValuePair.cs">
+      <Link>Windows\ParameterValuePair.cs</Link>
+    </Compile>
+    <Compile Include="..\Softphone\Windows\UccTracing.xaml.cs">
+      <Link>Windows\UccTracing.xaml.cs</Link>
+      <DependentUpon>UccTracing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\Softphone\Windows\WindowEx.cs">
+      <Link>Windows\WindowEx.cs</Link>
+    </Compile>
+    <Compile Include="Controls\SoundFileBox.xaml.cs">
+      <DependentUpon>SoundFileBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FileTransferTests.cs" />
+    <Compile Include="FlashWindow.cs" />
+    <Compile Include="Helpers\LastInputTime.cs" />
+    <Compile Include="Logs\Log.cs" />
+    <Compile Include="Logs\LogItem.cs" />
+    <None Include="Garbage\Minidump.cs" />
+    <Compile Include="PresentitiesCollectionStorage.cs" />
+    <Compile Include="Programme.Crash.cs" />
+    <Compile Include="Programme.Helpers.cs" />
+    <Compile Include="Programme.Shared.cs" />
+    <Compile Include="Properties\SettingsEx.cs" />
+    <Compile Include="Uccapi\AuthenticationMode.cs" />
+    <Compile Include="Uccapi\AvailabilityValues.cs" />
+    <Compile Include="Uccapi\AvSession.cs" />
+    <Compile Include="Uccapi\CategoryName.cs" />
+    <Compile Include="Uccapi\Public\ITransfersManager.cs" />
+    <Compile Include="Uccapi\Public\ITransferItem.cs" />
+    <Compile Include="Uccapi\Public\ITransfersState.cs" />
+    <Compile Include="Uccapi\TransfersManager.cs" />
+    <Compile Include="Uccapi\PresentitiesCollection.cs" />
+    <Compile Include="Uccapi\IncomingMessage.cs" />
+    <None Include="Garbage\ICancelPropertyChanging.cs" />
+    <Compile Include="Uccapi\TransferItem.cs" />
+    <Compile Include="Uccapi\Public\EndpointStatus.cs" />
+    <Compile Include="Uccapi\Public\IAvSession.cs" />
+    <Compile Include="Uccapi\Public\IEndpointEvents.cs" />
+    <Compile Include="Uccapi\Public\IMessages.cs" />
+    <Compile Include="Uccapi\ComEvents.cs" />
+    <Compile Include="Uccapi\EndpointConfiguration.cs" />
+    <Compile Include="Uccapi\Public\IImSession.cs" />
+    <Compile Include="Uccapi\ImSession.cs" />
+    <Compile Include="Uccapi\Public\IPhoneLine.cs" />
+    <Compile Include="Uccapi\Public\IPresentitiesCollection.cs" />
+    <Compile Include="Uccapi\Public\IPresentity.cs" />
+    <Compile Include="Uccapi\OutgoingMessage.cs" />
+    <Compile Include="Uccapi\ParticipantResult.cs" />
+    <Compile Include="Uccapi\Public\ISession.cs" />
+    <Compile Include="Uccapi\ParticipantLog.cs" />
+    <Compile Include="Uccapi\Presentity.cs" />
+    <Compile Include="Programme.Tasks.cs" />
+    <Compile Include="Programme.Uccapi.cs" />
+    <Compile Include="Uccapi\Endpoint.cs" />
+    <Compile Include="Properties\AssemblyInfoConsts.cs" />
+    <None Include="Garbage\Contact.cs" />
+    <Compile Include="Controls\CloseTabButton.xaml.cs">
+      <DependentUpon>CloseTabButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Uccapi\Errors.cs" />
+    <Compile Include="Uccapi\Helpers.cs" />
+    <None Include="Uccapi\Old\IMSession.cs" />
+    <None Include="Uccapi\Old\try\Platform.cs" />
+    <Compile Include="Uccapi\Public\PresentitiesCollectionXmlSerializer.cs" />
+    <Compile Include="Uccapi\Public\PropertyName.cs" />
+    <Compile Include="Uccapi\Public\SearchUserRecord.cs" />
+    <Compile Include="Uccapi\SelfPresentity.cs" />
+    <Compile Include="Uccapi\SelfPresentityMonitor.cs" />
+    <Compile Include="Uccapi\Session.cs" />
+    <Compile Include="Uccapi\TransfersState.cs" />
+    <Compile Include="Uccapi\UccapiBase.cs" />
+    <Compile Include="Uccapi\VideoWindowHost.cs" />
+    <Compile Include="Uccapi\VideoWindowWrapper.cs" />
+    <Compile Include="Windows\BaseCommands.cs" />
+    <Compile Include="Windows\PropertiesBinding.cs" />
+    <Compile Include="Windows\AddContact.xaml.cs">
+      <DependentUpon>AddContact.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AvChat.xaml.cs">
+      <DependentUpon>AvChat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AvChatController.cs" />
+    <Compile Include="BugTracer.cs" />
+    <Compile Include="Windows\ChatTabItem.cs" />
+    <Compile Include="Windows\ChatTabItemContent.xaml.cs">
+      <DependentUpon>ChatTabItemContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ChatTabItemHeader.xaml.cs">
+      <DependentUpon>ChatTabItemHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Contacts.Syscommads.cs" />
+    <None Include="Garbage\StretchColumnConverter.cs" />
+    <Compile Include="Windows\Converters\BoolConverter.cs" />
+    <Compile Include="Windows\Converters\GroupIsExpandedConverter.cs" />
+    <Compile Include="Windows\Converters\InverseVisibilityConverter.cs" />
+    <Compile Include="Windows\Converters\ComposingConverter.cs" />
+    <Compile Include="Windows\Converters\GroupConverter.cs" />
+    <Compile Include="Windows\Converters\InverseConverter.cs" />
+    <Compile Include="Windows\Converters\ParticipantIdConverter.cs" />
+    <Compile Include="Windows\Converters\ParticipantStateConverter.cs" />
+    <Compile Include="Windows\Converters\PhonesConverter.cs" />
+    <Compile Include="Windows\Converters\StringConverter.cs" />
+    <Compile Include="Windows\Converters\VisibilityConverter.cs" />
+    <Compile Include="Windows\Crash2.xaml.cs">
+      <DependentUpon>Crash2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\DropDownButton.cs" />
+    <Compile Include="Windows\Crash.xaml.cs">
+      <DependentUpon>Crash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\FindContact.xaml.cs">
+      <DependentUpon>FindContact.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Helpers.cs" />
+    <Compile Include="Windows\NewGroup.xaml.cs">
+      <DependentUpon>NewGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SelectFiles.xaml.cs">
+      <DependentUpon>SelectFiles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UserProperties.xaml.cs">
+      <DependentUpon>UserProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ValidationRules\GroupValidationRule.cs" />
+    <Compile Include="Windows\MessengerCommands.cs" />
+    <Compile Include="Windows\Preferences.xaml.cs">
+      <DependentUpon>Preferences.xaml</DependentUpon>
+    </Compile>
+    <None Include="Garbage\ContactsCollection.cs" />
+    <Compile Include="Windows\Converters\StateConverter.cs" />
+    <Compile Include="Windows\ValidationRules\NotEmptyValidationRule.cs" />
+    <Compile Include="Windows\ValidationRules\OkEnabler.cs" />
+    <Compile Include="Windows\ValidationRules\UriValidationRule.cs" />
+    <Compile Include="Windows\VideoArea.cs" />
+    <Compile Include="Windows\VistaGlassHelper.cs" />
+    <Compile Include="Windows\Chat.xaml.cs">
+      <DependentUpon>Chat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Contacts.xaml.cs">
+      <DependentUpon>Contacts.xaml</DependentUpon>
+    </Compile>
+    <None Include="Uccapi\Old\Platform.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Uccapi\Old\Session.cs" />
+    <None Include="Uccapi\Old\UccApiErr.cs" />
+    <Compile Include="Windows\Win32.cs" />
+    <None Include="Garbage\WindowMonitor.cs" />
+    <None Include="app.config" />
+    <None Include="Messenger.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Garbage\OldCode.txt" />
+    <EmbeddedResource Include="Icons\Red.ico" />
+    <EmbeddedResource Include="Icons\Green.ico" />
+    <EmbeddedResource Include="Icons\Yellow.ico" />
+    <EmbeddedResource Include="Icons\Grey.ico" />
+    <None Include="Icons\NotUsed\Boss.ico" />
+    <Resource Include="Icons\VideoChat.ico" />
+    <Resource Include="Icons\Chat.ico" />
+    <None Include="Icons\NotUsed\User.ico" />
+    <None Include="Icons\NotUsed\VoiceChat.ico" />
+    <Resource Include="..\Notice.txt">
+      <Link>Notice.txt</Link>
+    </Resource>
+    <Resource Include="LocBamlCsv.Target.xml" />
+    <Content Include="Microsoft.Office.Interop.UccApi.Dll" />
+    <Content Include="RTMPLTFM.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="SplashScreen.png" />
+    <None Include="Sounds\call.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Sounds\imessage.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Sounds\omessage.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <LocBamlCsv Include="Translation\pl-PL.csv">
+      <Culture>pl-PL</Culture>
+    </LocBamlCsv>
+    <LocBamlCsv Include="Translation\ru-RU.csv">
+      <Culture>ru-RU</Culture>
+    </LocBamlCsv>
+    <LocBamlCsv Include="Translation\de-DE.csv">
+      <Culture>de-DE</Culture>
+    </LocBamlCsv>
+    <LocBamlCsv Include="Translation\tr-TR.csv">
+      <Culture>tr-TR</Culture>
+    </LocBamlCsv>
+    <Content Include="UccApi.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RichTextBoxEx\RichTextBoxEx.csproj">
+      <Project>{3749FD44-774A-4600-818C-C01807C71C42}</Project>
+      <Name>RichTextBoxEx</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(ProjectDir)LocBamlCsv.Target.xml" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

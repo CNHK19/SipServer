@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29CA7AC4-441C-4848-AEF8-B3073772D045}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Messenger</RootNamespace>
+    <AssemblyName>Softphone</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ApplicationManifest>Softphone.manifest</ApplicationManifest>
+    <ApplicationIcon>VideoChat.ico</ApplicationIcon>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.UccApi, Version=2.0.6362.123, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=x86">
+      <HintPath>..\Messenger\Microsoft.Office.Interop.UccApi.Dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.Windows.Design.Extensibility, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.Windows.Design.Interaction, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.Windows.Design.Markup, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="Programme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="..\Messenger\Controls\SoundFileBox.xaml">
+      <Link>Controls\SoundFileBox.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\Messenger\Icons\PresenceImages.xaml">
+      <Link>PresenceImages.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\Messenger\Windows\Crash2.xaml">
+      <Link>Windows\Crash2.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\About.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Disconnect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Invite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Preferences.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\UccTracing.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Window1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Programme.xaml.cs">
+      <DependentUpon>Programme.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Windows\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Messenger\BugTracer.cs">
+      <Link>BugTracer.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Controls\SoundFileBox.xaml.cs">
+      <Link>Controls\SoundFileBox.xaml.cs</Link>
+      <DependentUpon>SoundFileBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\Messenger\Programme.Crash.cs">
+      <Link>Programme.Crash.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Programme.Helpers.cs">
+      <Link>Programme.Helpers.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Programme.Shared.cs">
+      <Link>Programme.Shared.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Properties\SettingsEx.cs">
+      <Link>Properties\SettingsEx.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\AuthenticationMode.cs">
+      <Link>Uccapi\AuthenticationMode.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\AvailabilityValues.cs">
+      <Link>Uccapi\AvailabilityValues.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\AvSession.cs">
+      <Link>Uccapi\AvSession.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\CategoryName.cs">
+      <Link>Uccapi\CategoryName.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\ComEvents.cs">
+      <Link>Uccapi\ComEvents.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Endpoint.cs">
+      <Link>Uccapi\Endpoint.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\EndpointConfiguration.cs">
+      <Link>Uccapi\EndpointConfiguration.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Errors.cs">
+      <Link>Uccapi\Errors.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Helpers.cs">
+      <Link>Uccapi\Helpers.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\ImSession.cs">
+      <Link>Uccapi\ImSession.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\IncomingMessage.cs">
+      <Link>Uccapi\IncomingMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\OutgoingMessage.cs">
+      <Link>Uccapi\OutgoingMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\ParticipantLog.cs">
+      <Link>Uccapi\ParticipantLog.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\ParticipantResult.cs">
+      <Link>Uccapi\ParticipantResult.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\PresentitiesCollection.cs">
+      <Link>Uccapi\PresentitiesCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Presentity.cs">
+      <Link>Uccapi\Presentity.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Public\EndpointStatus.cs">
+      <Link>Uccapi\Public\EndpointStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Public\IAvSession.cs">
+      <Link>Uccapi\Public\IAvSession.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Public\IEndpointEvents.cs">
+      <Link>Uccapi\Public\IEndpointEvents.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Public\IImSession.cs">
+      <Link>Uccapi\Public\IImSession.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Public\IMessages.cs">
+      <Link>Uccapi\Public\IMessages.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Public\IPhoneLine.cs">
+      <Link>Uccapi\Public\IPhoneLine.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Public\IPresentitiesCollection.cs">
+      <Link>Uccapi\Public\IPresentitiesCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Public\IPresentity.cs">
+      <Link>Uccapi\Public\IPresentity.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Public\ISession.cs">
+      <Link>Uccapi\Public\ISession.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Public\ITransferItem.cs">
+      <Link>Uccapi\Public\ITransferItem.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Public\ITransfersManager.cs">
+      <Link>Uccapi\Public\ITransfersManager.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Public\ITransfersState.cs">
+      <Link>Uccapi\Public\ITransfersState.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Public\PresentitiesCollectionXmlSerializer.cs">
+      <Link>Uccapi\Public\PresentitiesCollectionXmlSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Public\PropertyName.cs">
+      <Link>Uccapi\Public\PropertyName.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Public\SearchUserRecord.cs">
+      <Link>Uccapi\Public\SearchUserRecord.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\SelfPresentity.cs">
+      <Link>Uccapi\SelfPresentity.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\SelfPresentityMonitor.cs">
+      <Link>Uccapi\SelfPresentityMonitor.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\Session.cs">
+      <Link>Uccapi\Session.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\TransferItem.cs">
+      <Link>Uccapi\TransferItem.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\TransfersManager.cs">
+      <Link>Uccapi\TransfersManager.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\TransfersState.cs">
+      <Link>Uccapi\TransfersState.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\UccapiBase.cs">
+      <Link>Uccapi\UccapiBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\VideoWindowHost.cs">
+      <Link>Uccapi\VideoWindowHost.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Uccapi\VideoWindowWrapper.cs">
+      <Link>Uccapi\VideoWindowWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Windows\BaseCommands.cs">
+      <Link>Windows\BaseCommands.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Windows\Converters\InverseConverter.cs">
+      <Link>Converters\InverseConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Windows\Converters\ParticipantStateConverter.cs">
+      <Link>Converters\ParticipantStateConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Windows\Converters\StateConverter.cs">
+      <Link>Converters\StateConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Windows\Converters\VisibilityConverter.cs">
+      <Link>Converters\VisibilityConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Windows\Crash2.xaml.cs">
+      <Link>Windows\Crash2.xaml.cs</Link>
+      <DependentUpon>Crash2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\Messenger\Windows\Helpers.cs">
+      <Link>Windows\Helpers.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Windows\PropertiesBinding.cs">
+      <Link>PropertiesBinding.cs</Link>
+    </Compile>
+    <Compile Include="..\Messenger\Windows\VideoArea.cs">
+      <Link>Windows\VideoArea.cs</Link>
+    </Compile>
+    <Compile Include="Converters\EndpointStatusConverter.cs" />
+    <Compile Include="Converters\PriorityMultiConverter.cs" />
+    <Compile Include="DispatcherHelper.cs" />
+    <Compile Include="Programme.Shared.Tasks.cs" />
+    <Compile Include="Programme.ProgrammeData.cs" />
+    <Compile Include="Programme.Tasks.cs" />
+    <Compile Include="Windows\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Commands.cs" />
+    <Compile Include="Windows\Disconnect.xaml.cs">
+      <DependentUpon>Disconnect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Invite.xaml.cs">
+      <DependentUpon>Invite.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ParameterValuePair.cs" />
+    <Compile Include="Windows\Preferences.xaml.cs">
+      <DependentUpon>Preferences.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\AssemblyInfoConsts.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Windows\UccTracing.xaml.cs">
+      <DependentUpon>UccTracing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WindowEx.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Softphone.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Messenger\RTMPLTFM.dll">
+      <Link>RTMPLTFM.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="..\Messenger\Sounds\call.wav">
+      <Link>Sounds\call.wav</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="app.config" />
+    <Content Include="..\Messenger\UccApi.dll">
+      <Link>UccApi.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="..\Notice.txt">
+      <Link>Notice.txt</Link>
+    </Resource>
+    <Resource Include="VideoChat.ico" />
+    <Resource Include="SplashScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

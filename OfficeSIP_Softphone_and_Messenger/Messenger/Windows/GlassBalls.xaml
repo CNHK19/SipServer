@@ -1,0 +1,99 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- RED BALL -->
+    <ControlTemplate x:Key="RedBall">
+        <Canvas Width="16" Height="16">
+            <Ellipse Width="16" Height="16">
+                <Ellipse.Fill>
+                    <RadialGradientBrush GradientOrigin="0.5, 0.8">
+                        <GradientStop Color="Red" Offset="0"></GradientStop>
+                        <GradientStop Color="DarkRed" Offset="1"></GradientStop>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse Width="12" Height="6" Opacity="0.7" Margin="2, 1, 0, 0">
+                <Ellipse.BitmapEffect>
+                    <BlurBitmapEffect Radius="2"></BlurBitmapEffect>
+                </Ellipse.BitmapEffect>
+                <Ellipse.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,2">
+                        <GradientStop Color="White" Offset="0"></GradientStop>
+                        <GradientStop Color="Red" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Canvas>
+    </ControlTemplate>
+    <!-- GREEN BALL -->
+    <ControlTemplate x:Key="GreenBall">
+        <Canvas Width="16" Height="16">
+            <Ellipse Width="16" Height="16">
+                <Ellipse.Fill>
+                    <RadialGradientBrush GradientOrigin="0.5, 0.8">
+                        <GradientStop Color="LightGreen" Offset="0"></GradientStop>
+                        <GradientStop Color="Green" Offset="1"></GradientStop>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse Width="12" Height="6" Opacity="0.7" Margin="2, 1, 0, 0">
+                <Ellipse.BitmapEffect>
+                    <BlurBitmapEffect Radius="2"></BlurBitmapEffect>
+                </Ellipse.BitmapEffect>
+                <Ellipse.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,2">
+                        <GradientStop Color="White" Offset="0"></GradientStop>
+                        <GradientStop Color="LightGreen" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Canvas>
+    </ControlTemplate>
+    <!-- YELLOW BALL -->
+    <ControlTemplate x:Key="YellowBall">
+        <Canvas Width="16" Height="16">
+            <Ellipse Width="16" Height="16">
+                <Ellipse.Fill>
+                    <RadialGradientBrush GradientOrigin="0.5, 0.8">
+                        <GradientStop Color="Yellow" Offset="0"></GradientStop>
+                        <GradientStop Color="Brown" Offset="1"></GradientStop>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse Width="12" Height="6" Opacity="0.7" Margin="2, 1, 0, 0">
+                <Ellipse.BitmapEffect>
+                    <BlurBitmapEffect Radius="2"></BlurBitmapEffect>
+                </Ellipse.BitmapEffect>
+                <Ellipse.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,2">
+                        <GradientStop Color="White" Offset="0"></GradientStop>
+                        <GradientStop Color="Yellow" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Canvas>
+    </ControlTemplate>
+    <!-- GREY -->
+    <ControlTemplate x:Key="GreyBall">
+        <Canvas Width="16" Height="16">
+            <Ellipse Width="16" Height="16">
+                <Ellipse.Fill>
+                    <RadialGradientBrush GradientOrigin="0.5, 0.8">
+                        <GradientStop Color="LightGray" Offset="0"></GradientStop>
+                        <GradientStop Color="Gray" Offset="1"></GradientStop>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Ellipse Width="12" Height="6" Opacity="0.7" Margin="2, 1, 0, 0">
+                <Ellipse.BitmapEffect>
+                    <BlurBitmapEffect Radius="2"></BlurBitmapEffect>
+                </Ellipse.BitmapEffect>
+                <Ellipse.Fill>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,2">
+                        <GradientStop Color="White" Offset="0"></GradientStop>
+                        <GradientStop Color="LightGray" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+        </Canvas>
+    </ControlTemplate>
+</ResourceDictionary>

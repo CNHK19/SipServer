@@ -1,0 +1,18 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Adds the build action 'LocBamlCsv' -->
+  <ItemGroup>
+    <AvailableItemName Include="LocBamlCsv"/>
+  </ItemGroup>
+  <Target Name="AfterBuild" DependsOnTargets="$(CreateSatelliteAssembliesDependsOn)" >
+    <!-- Locbaml needs the runtime assemblies in the output dir -->
+    <Copy SourceFiles="$(ProjectDir)..\Tools\LocBaml.exe" DestinationFolder="$(OutputPath)" />
+    <!-- generate a .resources file for .csv merged output -->
+    <Exec Command="LocBaml /generate ..\..\$(IntermediateOutputPath)$(TargetName).g.$(UICulture).resources /trans:%(LocBamlCsv.FullPath) /out:..\..\$(IntermediateOutputPath) /cul:%(LocBamlCsv.Culture)" WorkingDirectory="$(OutputPath)" ContinueOnError="true"/>
+    <!--<AL  TemplateFile="$(TargetName).exe" Culture="%(LocBamlCsv.Culture)" OutputAssembly="..\..\$(OutputPath)%(LocBamlCsv.Culture)\$(TargetName).resources.dll" EmbedResources="$(TargetName).g.%(LocBamlCsv.Culture).resources"></AL>-->
+    <MakeDir Directories="$(OutputPath)%(LocBamlCsv.Culture)"></MakeDir>
+    <Exec Command='"C:\Program Files\Microsoft SDKs\Windows\v6.0A\bin\al.exe" /template:$(TargetName).exe /culture:%(LocBamlCsv.Culture) /out:..\..\$(OutputPath)%(LocBamlCsv.Culture)\$(TargetName).resources.dll /embed:$(TargetName).g.%(LocBamlCsv.Culture).resources'
+      WorkingDirectory="$(IntermediateOutputPath)"
+      ContinueOnError="true"/>
+    <Delete Files="$(OutputPath)\LocBaml.exe" />
+  </Target>
+</Project>

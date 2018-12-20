@@ -1,0 +1,165 @@
+Messenger.g.en-US.resources:programme.baml,msg1:System.String.$Content,None,True,True,,"AssemblyProduct is already running.
+Use -userid[id] command line option if you need to start two or more instances of the application.
+Example: Messenger.exe -useriduser2"
+Messenger.g.en-US.resources:programme.baml,c1:System.String.$Content,None,True,True,,Ok
+Messenger.g.en-US.resources:programme.baml,c2:System.String.$Content,None,True,True,,Apply
+Messenger.g.en-US.resources:programme.baml,c3:System.String.$Content,None,True,True,,Cancel
+Messenger.g.en-US.resources:programme.baml,c4:System.String.$Content,None,True,True,,About
+Messenger.g.en-US.resources:programme.baml,c5:System.String.$Content,None,True,True,,Homepage
+Messenger.g.en-US.resources:programme.baml,c6:System.String.$Content,None,True,True,,Preferences
+Messenger.g.en-US.resources:programme.baml,c7:System.String.$Content,None,True,True,,Feedback
+Messenger.g.en-US.resources:programme.baml,c8:System.String.$Content,None,True,True,,Go to Url
+Messenger.g.en-US.resources:programme.baml,c9:System.String.$Content,None,True,True,,Go to Email
+Messenger.g.en-US.resources:programme.baml,c10:System.String.$Content,None,True,True,,Login
+Messenger.g.en-US.resources:programme.baml,c11:System.String.$Content,None,True,True,,Login As
+Messenger.g.en-US.resources:programme.baml,c12:System.String.$Content,None,True,True,,Logout
+Messenger.g.en-US.resources:programme.baml,c13:System.String.$Content,None,True,True,,Close
+Messenger.g.en-US.resources:programme.baml,c14:System.String.$Content,None,True,True,,Troubleshooting
+Messenger.g.en-US.resources:programme.baml,c15:System.String.$Content,None,True,True,,Tuning Wizard
+Messenger.g.en-US.resources:programme.baml,c16:System.String.$Content,None,True,True,,Reset Wizard Settings
+Messenger.g.en-US.resources:programme.baml,c17:System.String.$Content,None,True,True,,Refresh
+Messenger.g.en-US.resources:programme.baml,c18:System.String.$Content,None,True,True,,Open Containing Folder
+Messenger.g.en-US.resources:programme.baml,c19:System.String.$Content,None,True,True,,View
+Messenger.g.en-US.resources:programme.baml,c20:System.String.$Content,None,True,True,,Call
+Messenger.g.en-US.resources:programme.baml,c21:System.String.$Content,None,True,True,,End Call
+Messenger.g.en-US.resources:programme.baml,c22:System.String.$Content,None,True,True,,Accept
+Messenger.g.en-US.resources:programme.baml,c23:System.String.$Content,None,True,True,,Reject
+Messenger.g.en-US.resources:programme.baml,c24:System.String.$Content,None,True,True,,Dial Pad
+Messenger.g.en-US.resources:programme.baml,c25:System.String.$Content,None,True,True,,Session Details
+Messenger.g.en-US.resources:programme.baml,c26:System.String.$Content,None,True,True,,Incoming Calls
+Messenger.g.en-US.resources:programme.baml,c27:System.String.$Content,None,True,True,,Local Video
+Messenger.g.en-US.resources:programme.baml,c28:System.String.$Content,None,True,True,,Copy All
+Messenger.g.en-US.resources:programme.baml,c29:System.String.$Content,None,True,True,,Re-Dial
+Messenger.g.en-US.resources:programme.baml,c30:System.String.$Content,None,True,True,,Remove
+Messenger.g.en-US.resources:programme.baml,c31:System.String.$Content,None,True,True,,Remove All
+Messenger.g.en-US.resources:programme.baml,c32:System.String.$Content,None,True,True,,Add Contact
+Messenger.g.en-US.resources:programme.baml,c33:System.String.$Content,None,True,True,,Remove Contact
+Messenger.g.en-US.resources:programme.baml,c34:System.String.$Content,None,True,True,,Find Contact
+Messenger.g.en-US.resources:programme.baml,c35:System.String.$Content,None,True,True,,New Group
+Messenger.g.en-US.resources:programme.baml,c36:System.String.$Content,None,True,True,,Send Instant Message
+Messenger.g.en-US.resources:programme.baml,c37:System.String.$Content,None,True,True,,Send File
+Messenger.g.en-US.resources:programme.baml,c38:System.String.$Content,None,True,True,,Start Audio Conversation
+Messenger.g.en-US.resources:programme.baml,c39:System.String.$Content,None,True,True,,Start Video Conversation
+Messenger.g.en-US.resources:programme.baml,c40:System.String.$Content,None,True,True,,Always on Top
+Messenger.g.en-US.resources:programme.baml,c41:System.String.$Content,None,True,True,,Offline Contacts
+Messenger.g.en-US.resources:programme.baml,c42:System.String.$Content,None,True,True,,Groups
+Messenger.g.en-US.resources:programme.baml,c44:System.String.$Content,None,True,True,,User Properties
+Messenger.g.en-US.resources:programme.baml,c45:System.String.$Content,None,True,True,,Cancel
+Messenger.g.en-US.resources:contacts.baml,mm1:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,Messenger
+Messenger.g.en-US.resources:contacts.baml,mm2:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,View
+Messenger.g.en-US.resources:contacts.baml,mm3:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,Contacts
+Messenger.g.en-US.resources:contacts.baml,mm4:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,Help
+Messenger.g.en-US.resources:contacts.baml,cm1:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,Group
+Messenger.g.en-US.resources:contacts.baml,cm2:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,New Group
+Messenger.g.en-US.resources:newgroup.baml,w1:System.Windows.Window.Title,Title,True,True,,New Group
+Messenger.g.en-US.resources:newgroup.baml,tb1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,New Group:
+Messenger.g.en-US.resources:newgroup.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Cancel
+Messenger.g.en-US.resources:newgroup.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Ok
+Messenger.g.en-US.resources:preferences.baml,w2:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Preferences
+Messenger.g.en-US.resources:preferences.baml,i1:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Do not show splash screen at startup
+Messenger.g.en-US.resources:preferences.baml,i2:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Minimize window on close button
+Messenger.g.en-US.resources:preferences.baml,i3:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Start program in minimized window
+Messenger.g.en-US.resources:preferences.baml,i4:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Always on top
+Messenger.g.en-US.resources:preferences.baml,i5:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Automatically login when Messenger starts
+Messenger.g.en-US.resources:preferences.baml,i6:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Automatically restore connection to the server
+Messenger.g.en-US.resources:preferences.baml,i7_1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Set Away after
+Messenger.g.en-US.resources:preferences.baml,i7_2:System.Windows.Controls.TextBlock.$Content,Text,True,True,,seconds of inactivity
+Messenger.g.en-US.resources:preferences.baml,i8:System.Windows.Controls.Label.$Content,Label,True,True,,Incoming message sound:
+Messenger.g.en-US.resources:preferences.baml,i9:System.Windows.Controls.Label.$Content,Label,True,True,,Outgoing message sound:
+Messenger.g.en-US.resources:preferences.baml,i10:System.Windows.Controls.Label.$Content,Label,True,True,,Incoming voice or video call sound:
+Messenger.g.en-US.resources:soundfilebox.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Play
+Messenger.g.en-US.resources:soundfilebox.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Select
+Messenger.g.en-US.resources:about.baml,w3:System.Windows.Window.Title,Title,True,True,,About
+Messenger.g.en-US.resources:about.baml,tb1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Homepage:
+Messenger.g.en-US.resources:about.baml,tb2:System.Windows.Controls.TextBlock.$Content,Text,True,True,,All rights reserved.
+Messenger.g.en-US.resources:findcontact.baml,w4:System.Windows.Window.Title,Title,True,True,,Find Contact
+Messenger.g.en-US.resources:findcontact.baml,i1:System.Windows.Controls.Label.$Content,Label,True,True,,Find by Name:
+Messenger.g.en-US.resources:findcontact.baml,i2:System.Windows.Controls.Label.$Content,Label,True,True,,Find by Email:
+Messenger.g.en-US.resources:findcontact.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Search
+Messenger.g.en-US.resources:findcontact.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Stop
+Messenger.g.en-US.resources:findcontact.baml,b3:System.Windows.Controls.Button.$Content,Button,True,True,,Cancel
+Messenger.g.en-US.resources:findcontact.baml,i3:System.Windows.Controls.Label.$Content,Label,True,True,,Searching...
+Messenger.g.en-US.resources:findcontact.baml,i4:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Results#i5;:
+Messenger.g.en-US.resources:findcontact.baml,i5:System.Windows.Controls.TextBlock.$Content,Text,True,True,,(more available)
+Messenger.g.en-US.resources:findcontact.baml,i6:System.Windows.Controls.Button.$Content,Button,True,True,,Add
+Messenger.g.en-US.resources:findcontact.baml,c1:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Name
+Messenger.g.en-US.resources:findcontact.baml,c2:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Uri
+Messenger.g.en-US.resources:findcontact.baml,c3:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Title
+Messenger.g.en-US.resources:findcontact.baml,c4:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Office
+Messenger.g.en-US.resources:findcontact.baml,c5:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Phone
+Messenger.g.en-US.resources:findcontact.baml,c6:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Company
+Messenger.g.en-US.resources:findcontact.baml,c7:System.Windows.Controls.GridViewColumn.Header,None,True,True,,City
+Messenger.g.en-US.resources:findcontact.baml,c8:System.Windows.Controls.GridViewColumn.Header,None,True,True,,State
+Messenger.g.en-US.resources:findcontact.baml,c9:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Country
+Messenger.g.en-US.resources:findcontact.baml,c10:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Email
+Messenger.g.en-US.resources:login.baml,w5:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Login
+Messenger.g.en-US.resources:login.baml,i1:System.Windows.Controls.Label.$Content,Label,True,True,,Sign-in address:
+Messenger.g.en-US.resources:login.baml,i2:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Use the current user credential
+Messenger.g.en-US.resources:login.baml,i3:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Use below username and password
+Messenger.g.en-US.resources:login.baml,i4:System.Windows.Controls.Label.$Content,Label,True,True,,Username:
+Messenger.g.en-US.resources:login.baml,i5:System.Windows.Controls.Label.$Content,Label,True,True,,Password:
+Messenger.g.en-US.resources:login.baml,i6:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Find server automatically
+Messenger.g.en-US.resources:login.baml,i7:System.Windows.Controls.Label.$Content,Label,True,True,,Server protocol and name or IP address:
+Messenger.g.en-US.resources:invite.baml,w6:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Incoming Call
+Messenger.g.en-US.resources:invite.baml,i1:System.Windows.Controls.Label.$Content,Label,True,True,,You got invite to audio-video chat. Do you Accept the incoming call?
+Messenger.g.en-US.resources:invite.baml,c1:System.Windows.Controls.GridViewColumn.Header,None,True,True,,From
+Messenger.g.en-US.resources:invite.baml,c2:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Name
+Messenger.g.en-US.resources:invite.baml,c3:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Created
+Messenger.g.en-US.resources:invite.baml,c4:System.Windows.Controls.GridViewColumn.Header,None,True,True,,State
+Messenger.g.en-US.resources:addcontact.baml,w7:System.Windows.Window.Title,Title,True,True,,Add Contact
+Messenger.g.en-US.resources:addcontact.baml,i1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Uri:
+Messenger.g.en-US.resources:addcontact.baml,i2:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Group:
+Messenger.g.en-US.resources:ucctracing.baml,w8:System.Windows.Window.Title,Title,True,True,,Tracing for Troubleshooting Purposes
+Messenger.g.en-US.resources:ucctracing.baml,i1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,This window can be used to enable and disable tracing for debugging and troubleshooting purposes. Click here to read <a>privacy note</a>.
+Messenger.g.en-US.resources:ucctracing.baml,i2:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Enable tracing
+Messenger.g.en-US.resources:ucctracing.baml,i3:System.Windows.Controls.Label.$Content,Label,True,True,,Tracing reports
+Messenger.g.en-US.resources:ucctracing.baml,c1:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Name
+Messenger.g.en-US.resources:ucctracing.baml,c2:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Modify Time
+Messenger.g.en-US.resources:crash2.baml,w9:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Exception
+Messenger.g.en-US.resources:crash2.baml,i1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,AssemblyProduct has encountered a problem and needs to close. We are sorry for inconvenience.
+Messenger.g.en-US.resources:crash2.baml,i2:System.Windows.Controls.TextBlock.$Content,Text,True,True,,"To help us diagnose the cause of this error and improve this software, please send report to us."
+Messenger.g.en-US.resources:crash2.baml,i3:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Thank you!
+Messenger.g.en-US.resources:crash2.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Don&apos;t Send
+Messenger.g.en-US.resources:crash2.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Send Report
+Messenger.g.en-US.resources:crash2.baml,i4:System.Windows.Controls.Label.$Content,Label,True,True,,Sending...
+Messenger.g.en-US.resources:crash2.baml,i5:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Finished:
+Messenger.g.en-US.resources:disconnect.baml,w10:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Disconnected
+Messenger.g.en-US.resources:disconnect.baml,i1:System.Windows.Controls.Label.$Content,Label,True,True,,Lost connection to the server:
+Messenger.g.en-US.resources:disconnect.baml,i2:System.Windows.Documents.Span.$Content,Text,True,True,,The connection will be restored automatially after
+Messenger.g.en-US.resources:disconnect.baml,i3:System.Windows.Documents.Span.$Content,Text,True,True,,seconds.
+Messenger.g.en-US.resources:avchat.baml,w11:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Audio Video Chat
+Messenger.g.en-US.resources:chat.baml,w12:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Chat
+Messenger.g.en-US.resources:chattabitemcontent.baml,i1:System.Windows.Documents.Span.$Content,Text,True,True,,Receiving file
+Messenger.g.en-US.resources:chattabitemcontent.baml,i2:System.Windows.Documents.Span.$Content,Text,True,True,,of
+Messenger.g.en-US.resources:chattabitemcontent.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Skip
+Messenger.g.en-US.resources:chattabitemcontent.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Cancel
+Messenger.g.en-US.resources:chattabitemcontent.baml,i3:System.Windows.Documents.Span.$Content,Text,True,True,,Sending file
+Messenger.g.en-US.resources:chattabitemcontent.baml,i4:System.Windows.Documents.Span.$Content,Text,True,True,,of
+Messenger.g.en-US.resources:chattabitemcontent.baml,b3:System.Windows.Controls.TextBlock.Text,Text,True,True,,Send
+Messenger.g.en-US.resources:userproperties.baml,w13:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - User Properties
+Messenger.g.en-US.resources:userproperties.baml,i1:System.Windows.Controls.Label.$Content,Label,True,True,,Emails:
+Messenger.g.en-US.resources:userproperties.baml,i2:System.Windows.Controls.Label.$Content,Label,True,True,,Phones:
+Messenger.g.en-US.resources:userproperties.baml,i3:System.Windows.Controls.Label.$Content,Label,True,True,,Fax:
+Messenger.g.en-US.resources:userproperties.baml,i4:System.Windows.Controls.Label.$Content,Label,True,True,,Homepage:
+Messenger.g.en-US.resources:userproperties.baml,i5:System.Windows.Controls.Label.$Content,Label,True,True,,Address:
+Messenger.g.en-US.resources:programme.baml,st0:System.String.$Content,None,True,True,,Available
+Messenger.g.en-US.resources:programme.baml,st1:System.String.$Content,None,True,True,,Away
+Messenger.g.en-US.resources:programme.baml,st2:System.String.$Content,None,True,True,,Idle
+Messenger.g.en-US.resources:programme.baml,st3:System.String.$Content,None,True,True,,Be Right Back
+Messenger.g.en-US.resources:programme.baml,st4:System.String.$Content,None,True,True,,Busy
+Messenger.g.en-US.resources:programme.baml,st5:System.String.$Content,None,True,True,,Busy (Away)
+Messenger.g.en-US.resources:programme.baml,st6:System.String.$Content,None,True,True,,Do Not Disturb
+Messenger.g.en-US.resources:programme.baml,st7:System.String.$Content,None,True,True,,Appear Offline
+Messenger.g.en-US.resources:programme.baml,st8:System.String.$Content,None,True,True,,Offline
+Messenger.g.en-US.resources:selectfiles.baml,w14:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Select Files
+Messenger.g.en-US.resources:selectfiles.baml,i1_1:System.Windows.Documents.Span.$Content,Text,True,True,,The user
+Messenger.g.en-US.resources:selectfiles.baml,i1_2:System.Windows.Documents.Span.$Content,Text,True,True,,"send files to you, do you accept these files?"
+Messenger.g.en-US.resources:selectfiles.baml,c1:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Accept
+Messenger.g.en-US.resources:selectfiles.baml,c2:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Name
+Messenger.g.en-US.resources:selectfiles.baml,c3:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Size
+Messenger.g.en-US.resources:selectfiles.baml,c4:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Exist
+Messenger.g.en-US.resources:selectfiles.baml,i2:System.Windows.Controls.Label.$Content,Label,True,True,,Download folder:
+Messenger.g.en-US.resources:selectfiles.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Select
+Messenger.g.en-US.resources:selectfiles.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Accept
+Messenger.g.en-US.resources:selectfiles.baml,b3:System.Windows.Controls.Button.$Content,Button,True,True,,Reject
+Messenger.g.en-US.resources:programme.baml,buttonWidth:System.Windows.Setter.Value,None,False,True,,60

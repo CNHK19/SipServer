@@ -1,0 +1,175 @@
+﻿<w:WindowEx x:Class="Messenger.Windows.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:w="clr-namespace:Messenger.Windows"
+    xmlns:m="clr-namespace:Messenger" SnapsToDevicePixels="True"
+    Left="{Binding Path=Left1, Mode=TwoWay}"
+    Top="{Binding Path=Top1, Mode=TwoWay}"
+    Title="{Binding Title1}" Width="320" SizeToContent="Height" ResizeMode="CanMinimize">
+    <Window.CommandBindings>
+        <CommandBinding Command="w:Commands.PhoneDigit" Executed="PhoneDigitBinding_Executed" CanExecute="PhoneDigitBinding_CanExecute"></CommandBinding>
+        <CommandBinding Command="w:Commands.ViewDialpad" Executed="ViewDialpadBinding_Executed"></CommandBinding>
+        <CommandBinding Command="w:Commands.ViewSessionDetails" Executed="ViewSessionDetailsBinding_Executed"></CommandBinding>
+        <CommandBinding Command="w:Commands.ViewLocalVideo" Executed="ViewLocalVideoBinding_Executed"></CommandBinding>
+    </Window.CommandBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="0,0,0,8" Grid.Row="0">
+            <Menu>
+                <MenuItem Header="Phone">
+                    <MenuItem Command="w:Commands.Login"></MenuItem>
+                    <MenuItem Command="w:Commands.LoginAs"></MenuItem>
+                    <MenuItem Command="w:Commands.Logout"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Command="w:Commands.Preferences"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Command="w:Commands.InvokeTuningWizard"></MenuItem>
+                    <MenuItem Command="w:Commands.ResetTuningWizardSettings"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Command="w:Commands.Close"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="View">
+                    <MenuItem Command="w:Commands.ViewIncomingCalls"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Command="w:Commands.ViewDialpad" IsChecked="{Binding ViewDialpad}"></MenuItem>
+                    <MenuItem Command="w:Commands.ViewLocalVideo" IsChecked="{Binding ViewLocalVideo}"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Command="w:Commands.ViewSessionDetails" IsChecked="{Binding ViewSessionDetails}"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Help">
+                    <MenuItem Command="w:Commands.UccTracing"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Command="w:Commands.Feedback"></MenuItem>
+                    <MenuItem Command="w:Commands.Homepage"></MenuItem>
+                    <MenuItem Command="w:Commands.About"></MenuItem>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+        <!-- ERROR TEXT -->
+        <Label Grid.Row="1" Visibility="{Binding RelativeSource={RelativeSource Self}, Path=Content.Text, Converter={StaticResource VisibilityConverter}}">
+            <TextBlock>
+                <TextBlock.Text>
+                    <MultiBinding Converter="{StaticResource PriorityMultiConverter}">
+                        <Binding Path="Endpoint.AvSession1.ParticipantLogs[1].LastError"></Binding>
+                        <Binding Path="ProgrammeData.CallError"></Binding>
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+        </Label>
+        <!-- PHONE NUMBER -->
+        <StackPanel Grid.Row="2" Margin="4,0,4,4">
+            <ComboBox DockPanel.Dock="Top" IsEditable="True" PreviewTextInput="ComboBox_PreviewTextInput"
+                      Text="{Binding Path=PhoneNumber, UpdateSourceTrigger=PropertyChanged}" 
+                      ItemsSource="{Binding ProgrammeData.OutgoingCalls}">
+                <ComboBox.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Command="w:Commands.RemoveAll"></MenuItem>
+                    </ContextMenu>
+                </ComboBox.ContextMenu>
+            </ComboBox>
+            <StackPanel Margin="0,4,0,0" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Style="{StaticResource OkCancelButton}" DockPanel.Dock="Right" Command="w:Commands.HangUp" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}" ToolTip="Ctrl+E"></Button>
+                <Button Style="{StaticResource OkCancelButton}" IsDefault="True" DockPanel.Dock="Right" Command="w:Commands.Call" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}" CommandParameter="{Binding PhoneNumber}" ToolTip="Enter"></Button>
+            </StackPanel>
+        </StackPanel>
+        <!-- DIALPAD -->
+        <UniformGrid Grid.Row="3" Margin="4,4,4,4" Rows="4" Columns="4" Visibility="{Binding Path=ViewDialpad, Converter={StaticResource VisibilityConverter}}">
+            <Button Command="w:Commands.PhoneDigit" CommandParameter="1" Content="{Binding RelativeSource={RelativeSource Self}, Path=CommandParameter}"></Button>
+            <Button Command="w:Commands.PhoneDigit" CommandParameter="2" Content="{Binding RelativeSource={RelativeSource Self}, Path=CommandParameter}"></Button>
+            <Button Command="w:Commands.PhoneDigit" CommandParameter="3" Content="{Binding RelativeSource={RelativeSource Self}, Path=CommandParameter}"></Button>
+            <Button Command="w:Commands.PhoneDigit" CommandParameter="4" Content="{Binding RelativeSource={RelativeSource Self}, Path=CommandParameter}"></Button>
+            <Button Command="w:Commands.PhoneDigit" CommandParameter="5" Content="{Binding RelativeSource={RelativeSource Self}, Path=CommandParameter}"></Button>
+            <Button Command="w:Commands.PhoneDigit" CommandParameter="6" Content="{Binding RelativeSource={RelativeSource Self}, Path=CommandParameter}"></Button>
+            <Button Command="w:Commands.PhoneDigit" CommandParameter="7" Content="{Binding RelativeSource={RelativeSource Self}, Path=CommandParameter}"></Button>
+            <Button Command="w:Commands.PhoneDigit" CommandParameter="8" Content="{Binding RelativeSource={RelativeSource Self}, Path=CommandParameter}"></Button>
+            <Button Command="w:Commands.PhoneDigit" CommandParameter="9" Content="{Binding RelativeSource={RelativeSource Self}, Path=CommandParameter}"></Button>
+            <Button Command="w:Commands.PhoneDigit" CommandParameter="0" Content="{Binding RelativeSource={RelativeSource Self}, Path=CommandParameter}"></Button>
+            <Button Command="w:Commands.PhoneDigit" CommandParameter="A" Content="{Binding RelativeSource={RelativeSource Self}, Path=CommandParameter}"></Button>
+            <Button Command="w:Commands.PhoneDigit" CommandParameter="B" Content="{Binding RelativeSource={RelativeSource Self}, Path=CommandParameter}"></Button>
+            <Button Command="w:Commands.PhoneDigit" CommandParameter="C" Content="{Binding RelativeSource={RelativeSource Self}, Path=CommandParameter}"></Button>
+            <Button Command="w:Commands.PhoneDigit" CommandParameter="D" Content="{Binding RelativeSource={RelativeSource Self}, Path=CommandParameter}"></Button>
+            <Button Command="w:Commands.PhoneDigit" CommandParameter="*" Content="{Binding RelativeSource={RelativeSource Self}, Path=CommandParameter}"></Button>
+            <Button Command="w:Commands.PhoneDigit" CommandParameter="#" Content="{Binding RelativeSource={RelativeSource Self}, Path=CommandParameter}"></Button>
+        </UniformGrid>
+        <!-- SESSION USER INFO -->
+        <StackPanel Grid.Row="4" Margin="4,4,4,0" Orientation="Horizontal" Visibility="{Binding ElementName=paticipant1, Path=Text, Converter={StaticResource VisibilityConverter}}">
+            <Label>
+                <TextBlock>
+                    <TextBlock Text="{Binding Path=Endpoint.AvSession1.ParticipantLogs[1].State, Converter={StaticResource ParticipantStateConverter}}"></TextBlock><TextBlock>:</TextBlock>
+                    <TextBlock Text="{Binding Path=Endpoint.AvSession1.ParticipantLogs[1].DisplayNameOrAor}" Name="paticipant1"></TextBlock>
+                </TextBlock>
+            </Label>
+        </StackPanel>
+        <!-- VIDEO AREA -->
+        <w:VideoArea Grid.Row="5" Margin="4,0,4,4" VideoSession="{Binding Path=Endpoint.AvSession1}" ViewLocalVideo="{Binding Path=ViewLocalVideo}"></w:VideoArea>
+        <!-- <Border Grid.Row="5" Margin="4,0,4,4" x:Name="videoLarge" Visibility="Collapsed"></Border> -->
+        <!-- SESSION DETAILS -->
+        <StackPanel Grid.Row="6" Margin="4,2,4,4" Visibility="{Binding Path=ViewSessionDetails, Converter={StaticResource VisibilityConverter}}">
+            <ListView>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Parameter" DisplayMemberBinding="{Binding Parameter}"></GridViewColumn>
+                        <GridViewColumn Header="Value" Width="160" DisplayMemberBinding="{Binding Value}"></GridViewColumn>
+                    </GridView>
+                </ListView.View>
+                <ListView.Items>
+                    <ListViewItem>
+                        <w:ParameterValuePair Parameter="Connected" Value="{Binding Path=Endpoint.IsEnabled}"></w:ParameterValuePair>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <w:ParameterValuePair Parameter="Sessions Count" Value="{Binding Path=Endpoint.Sessions.Count}"></w:ParameterValuePair>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <w:ParameterValuePair Parameter="Participants" Value="{Binding Path=Endpoint.AvSession1.ParticipantLogs.Count}"></w:ParameterValuePair>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <w:ParameterValuePair Parameter="Participant #1" Value="{Binding Path=Endpoint.AvSession1.ParticipantLogs[0].Uri}"></w:ParameterValuePair>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <w:ParameterValuePair Parameter="Participant #2" Value="{Binding Path=Endpoint.AvSession1.ParticipantLogs[1].Uri}"></w:ParameterValuePair>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <w:ParameterValuePair Parameter="#2 DTMF Ready" Value="{Binding Path=Endpoint.AvSession1.ParticipantLogs[1].IsRemoteConnected}"></w:ParameterValuePair>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <w:ParameterValuePair Parameter="Video IN Channels" Value="{Binding Path=Endpoint.AvSession1.VideoInChannelCount}"></w:ParameterValuePair>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <w:ParameterValuePair Parameter="Video OUT Channels" Value="{Binding Path=Endpoint.AvSession1.VideoOutChannelCount}"></w:ParameterValuePair>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <w:ParameterValuePair Parameter="Audio IN Channels" Value="{Binding Path=Endpoint.AvSession1.AudioInChannelCount}"></w:ParameterValuePair>
+                    </ListViewItem>
+                    <ListViewItem>
+                        <w:ParameterValuePair Parameter="Audio OUT Channels" Value="{Binding Path=Endpoint.AvSession1.AudioOutChannelCount}"></w:ParameterValuePair>
+                    </ListViewItem>
+                </ListView.Items>
+            </ListView>
+        </StackPanel>
+        <!-- STATUS BAR -->
+        <StatusBar Grid.Row="7">
+            <StatusBarItem>
+                <Image Width="12" Height="12" Source="{Binding Path=Endpoint.Status, Converter={StaticResource EndpointStatusConverter}}"></Image>
+            </StatusBarItem>
+            <Separator></Separator>
+            <StatusBarItem>
+                <TextBlock Text="{Binding Path=Endpoint.Status, Converter={StaticResource EndpointStatusConverter}}"></TextBlock>
+            </StatusBarItem>
+            <!--
+            <Separator></Separator>
+            <StatusBarItem>
+                <TextBlock Text="{Binding Path=Endpoint.AvSession1.ParticipantLogs[1].State, Converter={StaticResource ParticipantStateConverter}}"></TextBlock>
+            </StatusBarItem>
+            -->
+        </StatusBar>
+    </Grid>
+</w:WindowEx>

@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="Messenger.Controls.SoundFileBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Name="SoundFileBoxX">
+    <DockPanel>
+        <Button DockPanel.Dock="Right" HorizontalAlignment="Right" Click="Play_Click" x:Uid="b1">Play</Button>
+        <Button DockPanel.Dock="Right" HorizontalAlignment="Right" Click="Select_Click" x:Uid="b2">Select</Button>
+        <TextBox Text="{Binding ElementName=SoundFileBoxX, Path=SoundFile, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch"></TextBox>
+    </DockPanel>
+</UserControl>

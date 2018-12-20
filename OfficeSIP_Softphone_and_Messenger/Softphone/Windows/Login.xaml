@@ -1,0 +1,51 @@
+﻿<!-- SOFTPHONE -->
+<w:WindowEx x:Class="Messenger.Windows.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:w="clr-namespace:Messenger.Windows"
+    Title="AssemblyTitle - Login" Width="300"
+    ResizeMode="NoResize" SizeToContent="Height" SnapsToDevicePixels="True"
+    WindowStartupLocation="CenterScreen" x:Uid="w5">
+    <!-- SOFTPHONE -->
+    <Window.CommandBindings>
+        <CommandBinding Command="w:Commands.Ok" Executed="OkBinding_Executed"></CommandBinding>
+        <CommandBinding Command="w:Commands.Cancel" Executed="CancelBinding_Executed"></CommandBinding>
+    </Window.CommandBindings>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <StackPanel Style="{StaticResource MainPanel}">
+        <Label x:Uid="i1">Sign-in address:</Label>
+        <TextBox Text="{Binding Path=SignInAddress, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        <StackPanel Margin="0,12,0,16">
+            <CheckBox IsChecked="{Binding Path=UseDefaultCredential}" Name="useDefault" Click="UseDefault_Click" x:Uid="i2">Use the current user credential</CheckBox>
+            <CheckBox IsChecked="{Binding Path=UseSpecifiedCredential}" Name="useSpecified" Click="UseSpecified_Click" x:Uid="i3">Use below username and password</CheckBox>
+            <Grid IsEnabled="{Binding ElementName=useSpecified, Path=IsChecked, Mode=OneWay}">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" x:Uid="i4">Username:</Label>
+                <TextBox Grid.Row="1" Grid.Column="0" Margin="0,0,4,0" Text="{Binding Path=Username, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                <Label Grid.Row="0" Grid.Column="1" x:Uid="i5">Password:</Label>
+                <PasswordBox Grid.Row="1" Grid.Column="1" Name="password" Loaded="Password_Loaded" PasswordChanged="Password_PasswordChanged"></PasswordBox>
+            </Grid>
+        </StackPanel>
+        <CheckBox Name="autoConfig" IsChecked="{Binding AutoConfigServer}" x:Uid="i6">Find server automatically</CheckBox>
+        <StackPanel IsEnabled="{Binding ElementName=autoConfig, Path=IsChecked, Mode=OneWay, Converter={StaticResource InverseConverter}}">
+            <Label x:Uid="i7">Server protocol and name or IP address:</Label>
+            <DockPanel>
+                <ComboBox SelectedValue="{Binding TransportMode}" ItemsSource="{Binding TransportModes}"></ComboBox>
+                <TextBox Text="{Binding Path=ServerAddress, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            </DockPanel>
+        </StackPanel>
+        <StackPanel Style="{StaticResource OkCancelPanel}">
+            <Button Command="w:Commands.Cancel" IsCancel="True" Style="{StaticResource OkCancelButton}" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"></Button>
+            <Button Command="w:Commands.Ok" IsDefault="True" Style="{StaticResource OkCancelButton}" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"></Button>
+        </StackPanel>
+    </StackPanel>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <!-- SOFTPHONE -->
+</w:WindowEx>

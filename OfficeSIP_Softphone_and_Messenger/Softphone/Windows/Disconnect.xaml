@@ -1,0 +1,26 @@
+﻿<w:WindowEx x:Class="Messenger.Windows.Disconnect"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:w="clr-namespace:Messenger.Windows"
+    Title="AssemblyTitle - Disconnected" Width="300" SnapsToDevicePixels="True" WindowStartupLocation="CenterScreen"
+    SizeToContent="Height" ResizeMode="NoResize" x:Uid="w10">
+    <Window.CommandBindings>
+        <CommandBinding Command="w:Commands.Cancel" Executed="CancelBinding_Executed"></CommandBinding>
+    </Window.CommandBindings>
+    <StackPanel Style="{StaticResource MainPanel}">
+        <Label x:Uid="i1">Lost connection to the server:</Label>
+        <TextBox Name="errorText" Text="{Binding Path=Error, Mode=OneTime}" IsReadOnly="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Height="100"></TextBox>
+        <Label Visibility="{Binding Path=RestoreEnabled, Converter={StaticResource VisibilityConverter}}">
+            <TextBlock TextWrapping="Wrap"><Span x:Uid="i2">
+                The connection will be restored automatially after</Span>
+                <TextBlock Text="{Binding Path=RestoreSeconds, Mode=OneWay}"></TextBlock>
+                <Span x:Uid="i3">seconds.</Span>
+            </TextBlock>
+        </Label>
+        <StackPanel Style="{StaticResource OkCancelPanel}">
+            <Button Command="w:Commands.CopyAll" CommandTarget="{Binding ElementName=errorText}" Style="{StaticResource OkCancelButton}" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"></Button>
+            <Button Command="w:Commands.Cancel" IsCancel="True" Style="{StaticResource OkCancelButton}" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"></Button>
+            <Button Command="w:Commands.Login" IsDefault="True" Style="{StaticResource OkCancelButton}" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"></Button>
+        </StackPanel>
+    </StackPanel>
+</w:WindowEx>

@@ -1,0 +1,166 @@
+﻿Messenger.g.en-US.resources:programme.baml,msg1:System.String.$Content,None,True,True,,"AssemblyProduct уже выполняется.
+
+Используйте команду -userid[id] если нужно запустить два или больше экземпляров приложения.
+Пример: Messenger.exe -useriduser2"
+Messenger.g.en-US.resources:programme.baml,c1:System.String.$Content,None,True,True,,Ок
+Messenger.g.en-US.resources:programme.baml,c2:System.String.$Content,None,True,True,,Применить
+Messenger.g.en-US.resources:programme.baml,c3:System.String.$Content,None,True,True,,Отмена
+Messenger.g.en-US.resources:programme.baml,c4:System.String.$Content,None,True,True,,О программе
+Messenger.g.en-US.resources:programme.baml,c5:System.String.$Content,None,True,True,,Домашняя страница
+Messenger.g.en-US.resources:programme.baml,c6:System.String.$Content,None,True,True,,Настройки
+Messenger.g.en-US.resources:programme.baml,c7:System.String.$Content,None,True,True,,Обратная связь
+Messenger.g.en-US.resources:programme.baml,c8:System.String.$Content,None,True,True,,Перейти по ссылке
+Messenger.g.en-US.resources:programme.baml,c9:System.String.$Content,None,True,True,,Отправить емэйл
+Messenger.g.en-US.resources:programme.baml,c10:System.String.$Content,None,True,True,,Подключиться
+Messenger.g.en-US.resources:programme.baml,c11:System.String.$Content,None,True,True,,Подключиться как
+Messenger.g.en-US.resources:programme.baml,c12:System.String.$Content,None,True,True,,Отключиться
+Messenger.g.en-US.resources:programme.baml,c13:System.String.$Content,None,True,True,,Закрыть
+Messenger.g.en-US.resources:programme.baml,c14:System.String.$Content,None,True,True,,Поиск неисправностей
+Messenger.g.en-US.resources:programme.baml,c15:System.String.$Content,None,True,True,,Мастер настройки
+Messenger.g.en-US.resources:programme.baml,c16:System.String.$Content,None,True,True,,Сбросить настройки мастера
+Messenger.g.en-US.resources:programme.baml,c17:System.String.$Content,None,True,True,,Обновить
+Messenger.g.en-US.resources:programme.baml,c18:System.String.$Content,None,True,True,,Открыть папку
+Messenger.g.en-US.resources:programme.baml,c19:System.String.$Content,None,True,True,,Просмотреть
+Messenger.g.en-US.resources:programme.baml,c20:System.String.$Content,None,True,True,,Вызвать
+Messenger.g.en-US.resources:programme.baml,c21:System.String.$Content,None,True,True,,Завершить звонок
+Messenger.g.en-US.resources:programme.baml,c22:System.String.$Content,None,True,True,,Принять
+Messenger.g.en-US.resources:programme.baml,c23:System.String.$Content,None,True,True,,Отклонить
+Messenger.g.en-US.resources:programme.baml,c24:System.String.$Content,None,True,True,,Номеронабиратель
+Messenger.g.en-US.resources:programme.baml,c25:System.String.$Content,None,True,True,,Информации о сессии
+Messenger.g.en-US.resources:programme.baml,c26:System.String.$Content,None,True,True,,Входящии вызовы
+Messenger.g.en-US.resources:programme.baml,c27:System.String.$Content,None,True,True,,Локальное видео
+Messenger.g.en-US.resources:programme.baml,c28:System.String.$Content,None,True,True,,Копировать все
+Messenger.g.en-US.resources:programme.baml,c29:System.String.$Content,None,True,True,,Перезвонить
+Messenger.g.en-US.resources:programme.baml,c30:System.String.$Content,None,True,True,,Удалить
+Messenger.g.en-US.resources:programme.baml,c31:System.String.$Content,None,True,True,,Удалить все
+Messenger.g.en-US.resources:programme.baml,c32:System.String.$Content,None,True,True,,Добавить контакт
+Messenger.g.en-US.resources:programme.baml,c33:System.String.$Content,None,True,True,,Удалить контакт
+Messenger.g.en-US.resources:programme.baml,c34:System.String.$Content,None,True,True,,Найти контакты
+Messenger.g.en-US.resources:programme.baml,c35:System.String.$Content,None,True,True,,Создать группу
+Messenger.g.en-US.resources:programme.baml,c36:System.String.$Content,None,True,True,,Отправить сообщение
+Messenger.g.en-US.resources:programme.baml,c37:System.String.$Content,None,True,True,,Отправить файл
+Messenger.g.en-US.resources:programme.baml,c38:System.String.$Content,None,True,True,,Установить аудио связь
+Messenger.g.en-US.resources:programme.baml,c39:System.String.$Content,None,True,True,,Установить видео связь
+Messenger.g.en-US.resources:programme.baml,c40:System.String.$Content,None,True,True,,Поверх всех окон
+Messenger.g.en-US.resources:programme.baml,c41:System.String.$Content,None,True,True,,Оффлайн контакты
+Messenger.g.en-US.resources:programme.baml,c42:System.String.$Content,None,True,True,,Группы
+Messenger.g.en-US.resources:programme.baml,c44:System.String.$Content,None,True,True,,Информация о пользователе
+Messenger.g.en-US.resources:programme.baml,c45:System.String.$Content,None,True,True,,Отмена
+Messenger.g.en-US.resources:contacts.baml,mm1:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,Основное
+Messenger.g.en-US.resources:contacts.baml,mm2:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,Вид
+Messenger.g.en-US.resources:contacts.baml,mm3:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,Контакты
+Messenger.g.en-US.resources:contacts.baml,mm4:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,Помощь
+Messenger.g.en-US.resources:contacts.baml,cm1:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,Группа
+Messenger.g.en-US.resources:contacts.baml,cm2:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,Новая группа
+Messenger.g.en-US.resources:newgroup.baml,w1:System.Windows.Window.Title,Title,True,True,,Создать группу
+Messenger.g.en-US.resources:newgroup.baml,tb1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Имя группы:
+Messenger.g.en-US.resources:newgroup.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Отмена
+Messenger.g.en-US.resources:newgroup.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Ок
+Messenger.g.en-US.resources:preferences.baml,w2:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Настройки
+Messenger.g.en-US.resources:preferences.baml,i1:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Не показывать заставку при старте
+Messenger.g.en-US.resources:preferences.baml,i2:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Минимизировать окно при закрытии
+Messenger.g.en-US.resources:preferences.baml,i3:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Минимизировать окно после старта
+Messenger.g.en-US.resources:preferences.baml,i4:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Поверх всех окон
+Messenger.g.en-US.resources:preferences.baml,i5:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Подключаться при запуске приложения
+Messenger.g.en-US.resources:preferences.baml,i6:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Востанавливать подключение при разрыве
+Messenger.g.en-US.resources:preferences.baml,i7_1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Статус Отсутсвую после
+Messenger.g.en-US.resources:preferences.baml,i7_2:System.Windows.Controls.TextBlock.$Content,Text,True,True,,секунд бездействия
+Messenger.g.en-US.resources:preferences.baml,i8:System.Windows.Controls.Label.$Content,Label,True,True,,Звук на входящее сообщение:
+Messenger.g.en-US.resources:preferences.baml,i9:System.Windows.Controls.Label.$Content,Label,True,True,,Звук на исходящее сообщение:
+Messenger.g.en-US.resources:preferences.baml,i10:System.Windows.Controls.Label.$Content,Label,True,True,,Звук на входящий аудио-видео вызов:
+Messenger.g.en-US.resources:soundfilebox.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Проиграть
+Messenger.g.en-US.resources:soundfilebox.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Выбрать
+Messenger.g.en-US.resources:about.baml,w3:System.Windows.Window.Title,Title,True,True,,О программе
+Messenger.g.en-US.resources:about.baml,tb1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Домашняя страница:
+Messenger.g.en-US.resources:about.baml,tb2:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Все права сохранены.
+Messenger.g.en-US.resources:findcontact.baml,w4:System.Windows.Window.Title,Title,True,True,,Найти контакты
+Messenger.g.en-US.resources:findcontact.baml,i1:System.Windows.Controls.Label.$Content,Label,True,True,,Найти по имени:
+Messenger.g.en-US.resources:findcontact.baml,i2:System.Windows.Controls.Label.$Content,Label,True,True,,Найти по адресу эл.почты:
+Messenger.g.en-US.resources:findcontact.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Пойск
+Messenger.g.en-US.resources:findcontact.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Остановить
+Messenger.g.en-US.resources:findcontact.baml,b3:System.Windows.Controls.Button.$Content,Button,True,True,,Отмена
+Messenger.g.en-US.resources:findcontact.baml,i3:System.Windows.Controls.Label.$Content,Label,True,True,,Пойск...
+Messenger.g.en-US.resources:findcontact.baml,i4:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Результаты#i5;:
+Messenger.g.en-US.resources:findcontact.baml,i5:System.Windows.Controls.TextBlock.$Content,Text,True,True,, (доступно больше)
+Messenger.g.en-US.resources:findcontact.baml,i6:System.Windows.Controls.Button.$Content,Button,True,True,,Добавить
+Messenger.g.en-US.resources:findcontact.baml,c1:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Имя
+Messenger.g.en-US.resources:findcontact.baml,c2:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Uri
+Messenger.g.en-US.resources:findcontact.baml,c3:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Должность
+Messenger.g.en-US.resources:findcontact.baml,c4:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Офис
+Messenger.g.en-US.resources:findcontact.baml,c5:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Телефон
+Messenger.g.en-US.resources:findcontact.baml,c6:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Компания
+Messenger.g.en-US.resources:findcontact.baml,c7:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Город
+Messenger.g.en-US.resources:findcontact.baml,c8:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Штат
+Messenger.g.en-US.resources:findcontact.baml,c9:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Страна
+Messenger.g.en-US.resources:findcontact.baml,c10:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Почта
+Messenger.g.en-US.resources:login.baml,w5:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Подключение
+Messenger.g.en-US.resources:login.baml,i1:System.Windows.Controls.Label.$Content,Label,True,True,,Имя @ домен для подключения:
+Messenger.g.en-US.resources:login.baml,i2:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Использовать пароль текущего пользователя
+Messenger.g.en-US.resources:login.baml,i3:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Использовать указанные имя и пароль
+Messenger.g.en-US.resources:login.baml,i4:System.Windows.Controls.Label.$Content,Label,True,True,,Имя пользователя:
+Messenger.g.en-US.resources:login.baml,i5:System.Windows.Controls.Label.$Content,Label,True,True,,Пароль:
+Messenger.g.en-US.resources:login.baml,i6:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Искать сервер
+Messenger.g.en-US.resources:login.baml,i7:System.Windows.Controls.Label.$Content,Label,True,True,,Протокол сервера и домен или IP адрес:
+Messenger.g.en-US.resources:invite.baml,w6:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Входящие вызовы
+Messenger.g.en-US.resources:invite.baml,i1:System.Windows.Controls.Label.$Content,Label,True,True,,Входящий вызов. Принять или отклонить входящий вызов?
+Messenger.g.en-US.resources:invite.baml,c1:System.Windows.Controls.GridViewColumn.Header,None,True,True,,От
+Messenger.g.en-US.resources:invite.baml,c2:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Имя
+Messenger.g.en-US.resources:invite.baml,c3:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Создан
+Messenger.g.en-US.resources:invite.baml,c4:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Состояние
+Messenger.g.en-US.resources:addcontact.baml,w7:System.Windows.Window.Title,Title,True,True,,Добавить контакт
+Messenger.g.en-US.resources:addcontact.baml,i1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Имя пользователя @ домен:
+Messenger.g.en-US.resources:addcontact.baml,i2:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Группа:
+Messenger.g.en-US.resources:ucctracing.baml,w8:System.Windows.Window.Title,Title,True,True,,Лог для поиска неисправностей
+Messenger.g.en-US.resources:ucctracing.baml,i1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,"В этом окне можно включить или отключить лог, который используется для устранения ошибок в программе. Нажмите здесь чтобы узнать <a>о безопасности</a>."
+Messenger.g.en-US.resources:ucctracing.baml,i2:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Включить лог
+Messenger.g.en-US.resources:ucctracing.baml,i3:System.Windows.Controls.Label.$Content,Label,True,True,,Логи приложения
+Messenger.g.en-US.resources:ucctracing.baml,c1:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Имя
+Messenger.g.en-US.resources:ucctracing.baml,c2:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Время изменения
+Messenger.g.en-US.resources:crash2.baml,w9:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Ошибка приложения
+Messenger.g.en-US.resources:crash2.baml,i1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,AssemblyProduct имеет ошибку и должно быть закрыто. Приносим извенения за неудобства.
+Messenger.g.en-US.resources:crash2.baml,i2:System.Windows.Controls.TextBlock.$Content,Text,True,True,,"Чтобы помочь нам определить причину этой ошибки и улучшить эту программу, пожалуйста, отправьте нам отчет."
+Messenger.g.en-US.resources:crash2.baml,i3:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Спасибо!
+Messenger.g.en-US.resources:crash2.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Не отправлять
+Messenger.g.en-US.resources:crash2.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Отправить отчет
+Messenger.g.en-US.resources:crash2.baml,i4:System.Windows.Controls.Label.$Content,Label,True,True,,Пересылка отчета...
+Messenger.g.en-US.resources:crash2.baml,i5:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Выполнено:
+Messenger.g.en-US.resources:disconnect.baml,w10:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Обрыв связи
+Messenger.g.en-US.resources:disconnect.baml,i1:System.Windows.Controls.Label.$Content,Label,True,True,,Подключение к серверу прервано:
+Messenger.g.en-US.resources:disconnect.baml,i2:System.Windows.Documents.Span.$Content,Text,True,True,,Подключение будет автоматически востановлено через
+Messenger.g.en-US.resources:disconnect.baml,i3:System.Windows.Documents.Span.$Content,Text,True,True,,секунд.
+Messenger.g.en-US.resources:avchat.baml,w11:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Аудио-видео связь
+Messenger.g.en-US.resources:chat.baml,w12:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Чат
+Messenger.g.en-US.resources:chattabitemcontent.baml,i1:System.Windows.Documents.Span.$Content,Text,True,True,,Скачивается файл
+Messenger.g.en-US.resources:chattabitemcontent.baml,i2:System.Windows.Documents.Span.$Content,Text,True,True,,из
+Messenger.g.en-US.resources:chattabitemcontent.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Пропустить
+Messenger.g.en-US.resources:chattabitemcontent.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Отменить
+Messenger.g.en-US.resources:chattabitemcontent.baml,i3:System.Windows.Documents.Span.$Content,Text,True,True,,Отправляется файл
+Messenger.g.en-US.resources:chattabitemcontent.baml,i4:System.Windows.Documents.Span.$Content,Text,True,True,,из
+Messenger.g.en-US.resources:chattabitemcontent.baml,b3:System.Windows.Controls.TextBlock.Text,Text,True,True,,Отправить
+Messenger.g.en-US.resources:userproperties.baml,w13:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - О пользователе
+Messenger.g.en-US.resources:userproperties.baml,i1:System.Windows.Controls.Label.$Content,Label,True,True,,Эл.почта:
+Messenger.g.en-US.resources:userproperties.baml,i2:System.Windows.Controls.Label.$Content,Label,True,True,,Телефоны:
+Messenger.g.en-US.resources:userproperties.baml,i3:System.Windows.Controls.Label.$Content,Label,True,True,,Факс:
+Messenger.g.en-US.resources:userproperties.baml,i4:System.Windows.Controls.Label.$Content,Label,True,True,,Сайт:
+Messenger.g.en-US.resources:userproperties.baml,i5:System.Windows.Controls.Label.$Content,Label,True,True,,Адрес:
+Messenger.g.en-US.resources:programme.baml,st0:System.String.$Content,None,True,True,,Доступен
+Messenger.g.en-US.resources:programme.baml,st1:System.String.$Content,None,True,True,,Отсутствую
+Messenger.g.en-US.resources:programme.baml,st2:System.String.$Content,None,True,True,,Отошел
+Messenger.g.en-US.resources:programme.baml,st3:System.String.$Content,None,True,True,,Скоро буду
+Messenger.g.en-US.resources:programme.baml,st4:System.String.$Content,None,True,True,,Занят
+Messenger.g.en-US.resources:programme.baml,st5:System.String.$Content,None,True,True,,Занят (Отошел)
+Messenger.g.en-US.resources:programme.baml,st6:System.String.$Content,None,True,True,,Не беспокойть
+Messenger.g.en-US.resources:programme.baml,st7:System.String.$Content,None,True,True,,Как будто отключен
+Messenger.g.en-US.resources:programme.baml,st8:System.String.$Content,None,True,True,,Отключен
+Messenger.g.en-US.resources:selectfiles.baml,w14:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Выбрать файлы
+Messenger.g.en-US.resources:selectfiles.baml,i1_1:System.Windows.Documents.Span.$Content,Text,True,True,,Пользователь
+Messenger.g.en-US.resources:selectfiles.baml,i1_2:System.Windows.Documents.Span.$Content,Text,True,True,,"отправляет файлы, принять файлы?"
+Messenger.g.en-US.resources:selectfiles.baml,c1:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Принять
+Messenger.g.en-US.resources:selectfiles.baml,c2:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Имя
+Messenger.g.en-US.resources:selectfiles.baml,c3:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Размер
+Messenger.g.en-US.resources:selectfiles.baml,c4:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Существует
+Messenger.g.en-US.resources:selectfiles.baml,i2:System.Windows.Controls.Label.$Content,Label,True,True,,Папка для файлов:
+Messenger.g.en-US.resources:selectfiles.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Выбрать
+Messenger.g.en-US.resources:selectfiles.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Принять
+Messenger.g.en-US.resources:selectfiles.baml,b3:System.Windows.Controls.Button.$Content,Button,True,True,,Отклонить
+Messenger.g.en-US.resources:programme.baml,buttonWidth:System.Windows.Setter.Value,None,False,True,,70

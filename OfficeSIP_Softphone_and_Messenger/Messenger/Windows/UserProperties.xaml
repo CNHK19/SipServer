@@ -1,0 +1,56 @@
+﻿<w:WindowEx x:Class="Messenger.Windows.UserProperties"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:w="clr-namespace:Messenger.Windows"
+    Title="AssemblyTitle - User Properties"
+    Width="300" SizeToContent="Height" SnapsToDevicePixels="True"
+    ResizeMode="NoResize" WindowStartupLocation="CenterScreen" x:Uid="w13">
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <Window.CommandBindings>
+        <CommandBinding Command="w:Commands.Ok" Executed="OkBinding_Executed"></CommandBinding>
+    </Window.CommandBindings>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <StackPanel Style="{StaticResource MainPanel}">
+        <!-- (*) Display Name -->
+        <StackPanel Orientation="Horizontal">
+            <Image Width="18" Height="18" Margin="5,2,5,2" Source="{Binding Mode=OneWay, Path=Availability, Converter={StaticResource StateConverter}}"></Image>
+            <!-- <ContentControl Margin="5,2,5,2" Template="{Binding Mode=OneWay, Path=Availability, Converter={StaticResource StateConverter}}" IsTabStop="False" /> -->
+            <Label>
+                <TextBlock Text="{Binding Mode=OneWay, Path=DisplayNameOrAor}"></TextBlock>
+            </Label>
+        </StackPanel>
+        <!-- Emails -->
+        <Label Visibility="{Binding Path=Emails, Converter={StaticResource VisibilityConverter}}" x:Uid="i1">Emails:</Label>
+        <ItemsControl Visibility="{Binding Path=Emails, Converter={StaticResource VisibilityConverter}}" ItemsSource="{Binding Mode=OneWay, Path=Emails}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Label>
+                        <Hyperlink Command="w:Commands.GotoEmail" CommandParameter="{Binding Mode=OneWay}">
+                            <TextBlock Text="{Binding Mode=OneWay}"></TextBlock>
+                        </Hyperlink>
+                    </Label>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <!-- Phones -->
+        <Label Visibility="{Binding Path=Phones, Converter={StaticResource VisibilityConverter}}" x:Uid="i2">Phones:</Label>
+        <TextBox Text="{Binding Mode=OneWay, Path=Phones, Converter={StaticResource PhonesConverter}}" Visibility="{Binding Path=Phones, Converter={StaticResource VisibilityConverter}}" IsReadOnly="True"></TextBox>
+        <!-- Fax -->
+        <Label Visibility="{Binding Mode=OneWay, Path=Fax, Converter={StaticResource VisibilityConverter}}" x:Uid="i3">Fax:</Label>
+        <TextBox Text="{Binding Mode=OneWay, Path=Fax}" Visibility="{Binding Mode=OneWay, Path=Fax, Converter={StaticResource VisibilityConverter}}" IsReadOnly="True"></TextBox>
+        <!-- Homepage -->
+        <Label Visibility="{Binding Mode=OneWay, Path=Homepage, Converter={StaticResource VisibilityConverter}}" x:Uid="i4">Homepage:</Label>
+        <Label Visibility="{Binding Mode=OneWay, Path=Homepage, Converter={StaticResource VisibilityConverter}}">
+            <Hyperlink Command="w:Commands.GotoUrl" CommandParameter="{Binding Mode=OneWay, Path=Homepage}">
+                <TextBlock Text="{Binding Mode=OneWay, Path=Homepage}"></TextBlock></Hyperlink>
+        </Label>
+        <!-- Address -->
+        <Label Visibility="{Binding Mode=OneWay, Path=Address, Converter={StaticResource VisibilityConverter}}" x:Uid="i5">Address:</Label>
+        <TextBox Text="{Binding Mode=OneWay, Path=Address}" Visibility="{Binding Mode=OneWay, Path=Address, Converter={StaticResource VisibilityConverter}}" MaxHeight="100" VerticalScrollBarVisibility="Auto" IsReadOnly="True"></TextBox>
+        <!-- Ok -->
+        <StackPanel Style="{StaticResource OkCancelPanel}">
+            <Button Command="w:Commands.Ok" IsDefault="True" Style="{StaticResource OkCancelButton}" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"></Button>
+        </StackPanel>
+    </StackPanel>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+</w:WindowEx>

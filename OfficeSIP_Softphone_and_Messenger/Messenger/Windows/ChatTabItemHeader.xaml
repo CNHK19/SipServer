@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="Messenger.Windows.ChatTabItemHeader"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:Messenger.Controls">
+    <StackPanel Orientation="Horizontal">
+        <!-- <ContentControl Template="{Binding Path=HeaderAvailability, Converter={StaticResource StateConverter}}" IsTabStop="False" /> -->
+        <Image Width="16" Height="16" Source="{Binding Path=HeaderAvailability, Converter={StaticResource StateConverter}}"></Image>
+        <TextBlock Margin="3 0 3 0" Text="{Binding Path='HeaderText'}"></TextBlock>
+        <c:CloseTabButton x:Name="CloseButton"></c:CloseTabButton>
+    </StackPanel>
+</UserControl>

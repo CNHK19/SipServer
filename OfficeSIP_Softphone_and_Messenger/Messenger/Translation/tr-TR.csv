@@ -1,0 +1,166 @@
+﻿Messenger.g.en-US.resources:programme.baml,msg1:System.String.$Content,None,True,True,,"AssemblyProduct çalışmasına devam ediyor.
+
+Bu uygulamanın birden fazla kullanıcı ile çalışmasını istiyorsanız -userid[id] komut satırı özelliğini kullanın.
+Örnek: Messenger.exe -useriduser2"
+Messenger.g.en-US.resources:programme.baml,c1:System.String.$Content,None,True,True,,Tamam
+Messenger.g.en-US.resources:programme.baml,c2:System.String.$Content,None,True,True,,Uygula
+Messenger.g.en-US.resources:programme.baml,c3:System.String.$Content,None,True,True,,İptal
+Messenger.g.en-US.resources:programme.baml,c4:System.String.$Content,None,True,True,,Hakkında
+Messenger.g.en-US.resources:programme.baml,c5:System.String.$Content,None,True,True,,Web Sayfası
+Messenger.g.en-US.resources:programme.baml,c6:System.String.$Content,None,True,True,,Tercihler
+Messenger.g.en-US.resources:programme.baml,c7:System.String.$Content,None,True,True,,Geri Bildirim
+Messenger.g.en-US.resources:programme.baml,c8:System.String.$Content,None,True,True,,Adrese Git
+Messenger.g.en-US.resources:programme.baml,c9:System.String.$Content,None,True,True,,Emaile Git
+Messenger.g.en-US.resources:programme.baml,c10:System.String.$Content,None,True,True,,Oturum Aç
+Messenger.g.en-US.resources:programme.baml,c11:System.String.$Content,None,True,True,,Farklı oturum Aç
+Messenger.g.en-US.resources:programme.baml,c12:System.String.$Content,None,True,True,,Oturumu Kapat
+Messenger.g.en-US.resources:programme.baml,c13:System.String.$Content,None,True,True,,Kapat
+Messenger.g.en-US.resources:programme.baml,c14:System.String.$Content,None,True,True,,Sorun Giderme
+Messenger.g.en-US.resources:programme.baml,c15:System.String.$Content,None,True,True,,Ayar Sihirbazı
+Messenger.g.en-US.resources:programme.baml,c16:System.String.$Content,None,True,True,,Sihirbaz ayarlarını sıfırla
+Messenger.g.en-US.resources:programme.baml,c17:System.String.$Content,None,True,True,,Yenile
+Messenger.g.en-US.resources:programme.baml,c18:System.String.$Content,None,True,True,,Bulunduğu Klasörü Aç
+Messenger.g.en-US.resources:programme.baml,c19:System.String.$Content,None,True,True,,Görünüm
+Messenger.g.en-US.resources:programme.baml,c20:System.String.$Content,None,True,True,,Arama Yap
+Messenger.g.en-US.resources:programme.baml,c21:System.String.$Content,None,True,True,,Aramayı Bitir
+Messenger.g.en-US.resources:programme.baml,c22:System.String.$Content,None,True,True,,Kabul Et
+Messenger.g.en-US.resources:programme.baml,c23:System.String.$Content,None,True,True,,Reddet
+Messenger.g.en-US.resources:programme.baml,c24:System.String.$Content,None,True,True,,Telefon Numarası Çevir
+Messenger.g.en-US.resources:programme.baml,c25:System.String.$Content,None,True,True,,Oturum Detayları
+Messenger.g.en-US.resources:programme.baml,c26:System.String.$Content,None,True,True,,Gelen Aramalar
+Messenger.g.en-US.resources:programme.baml,c27:System.String.$Content,None,True,True,,Yerel Video
+Messenger.g.en-US.resources:programme.baml,c28:System.String.$Content,None,True,True,,Hepsini Kopyala
+Messenger.g.en-US.resources:programme.baml,c29:System.String.$Content,None,True,True,,Tekrar Ara
+Messenger.g.en-US.resources:programme.baml,c30:System.String.$Content,None,True,True,,Kaldır
+Messenger.g.en-US.resources:programme.baml,c31:System.String.$Content,None,True,True,,Tümünü Kaldır
+Messenger.g.en-US.resources:programme.baml,c32:System.String.$Content,None,True,True,,Kişi Ekle
+Messenger.g.en-US.resources:programme.baml,c33:System.String.$Content,None,True,True,,Kişi Sil
+Messenger.g.en-US.resources:programme.baml,c34:System.String.$Content,None,True,True,,Kişi Bul
+Messenger.g.en-US.resources:programme.baml,c35:System.String.$Content,None,True,True,,Yeni Grup
+Messenger.g.en-US.resources:programme.baml,c36:System.String.$Content,None,True,True,,Anlık Mesaj Gönder
+Messenger.g.en-US.resources:programme.baml,c37:System.String.$Content,None,True,True,,Dosya Gönder
+Messenger.g.en-US.resources:programme.baml,c38:System.String.$Content,None,True,True,,Sesli Görüşmeyi Başlat
+Messenger.g.en-US.resources:programme.baml,c39:System.String.$Content,None,True,True,,Görüntülü Görüşmeyi Başlat
+Messenger.g.en-US.resources:programme.baml,c40:System.String.$Content,None,True,True,,Herzaman Üstte
+Messenger.g.en-US.resources:programme.baml,c41:System.String.$Content,None,True,True,,Çevrimdışı Kişiler
+Messenger.g.en-US.resources:programme.baml,c42:System.String.$Content,None,True,True,,Gruplar
+Messenger.g.en-US.resources:programme.baml,c44:System.String.$Content,None,True,True,,Kullanıcı Özellikleri
+Messenger.g.en-US.resources:programme.baml,c45:System.String.$Content,None,True,True,,İptal
+Messenger.g.en-US.resources:contacts.baml,mm1:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,Messenger
+Messenger.g.en-US.resources:contacts.baml,mm2:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,Görünüm
+Messenger.g.en-US.resources:contacts.baml,mm3:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,Kişiler
+Messenger.g.en-US.resources:contacts.baml,mm4:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,Yardım
+Messenger.g.en-US.resources:contacts.baml,cm1:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,Grup
+Messenger.g.en-US.resources:contacts.baml,cm2:System.Windows.Controls.HeaderedItemsControl.Header,Menu,True,True,,Yeni Grup
+Messenger.g.en-US.resources:newgroup.baml,w1:System.Windows.Window.Title,Title,True,True,,Yeni Grup
+Messenger.g.en-US.resources:newgroup.baml,tb1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Yeni Grup:
+Messenger.g.en-US.resources:newgroup.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,İptal
+Messenger.g.en-US.resources:newgroup.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Tamam
+Messenger.g.en-US.resources:preferences.baml,w2:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Tercihler
+Messenger.g.en-US.resources:preferences.baml,i1:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Başlangıç ekranını gösterme
+Messenger.g.en-US.resources:preferences.baml,i2:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Kapattığımda minimize et
+Messenger.g.en-US.resources:preferences.baml,i3:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Minimize durumda program çalışmasına devam etsin
+Messenger.g.en-US.resources:preferences.baml,i4:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Herzaman Üstte
+Messenger.g.en-US.resources:preferences.baml,i5:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Messenger başladğında Otomatik olarak Grişi yap
+Messenger.g.en-US.resources:preferences.baml,i6:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Otomatik olarak sunucu bağlantısını restore et
+Messenger.g.en-US.resources:preferences.baml,i7_1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Kulanmadığımda durumumu
+Messenger.g.en-US.resources:preferences.baml,i7_2:System.Windows.Controls.TextBlock.$Content,Text,True,True,,saniye sonra Dışarda olarak ayarla
+Messenger.g.en-US.resources:preferences.baml,i8:System.Windows.Controls.Label.$Content,Label,True,True,,Gelen mesaj sesi:
+Messenger.g.en-US.resources:preferences.baml,i9:System.Windows.Controls.Label.$Content,Label,True,True,,Giden mesaj sesi:
+Messenger.g.en-US.resources:preferences.baml,i10:System.Windows.Controls.Label.$Content,Label,True,True,,Gelen Ses/Video görüşmesi sesi:
+Messenger.g.en-US.resources:soundfilebox.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Oynat
+Messenger.g.en-US.resources:soundfilebox.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Seç
+Messenger.g.en-US.resources:about.baml,w3:System.Windows.Window.Title,Title,True,True,,Hakkında
+Messenger.g.en-US.resources:about.baml,tb1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Web Sayfası:
+Messenger.g.en-US.resources:about.baml,tb2:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Tüm hakları saklıdır.
+Messenger.g.en-US.resources:findcontact.baml,w4:System.Windows.Window.Title,Title,True,True,,Kişi Bul
+Messenger.g.en-US.resources:findcontact.baml,i1:System.Windows.Controls.Label.$Content,Label,True,True,,İsme Göre Bul:
+Messenger.g.en-US.resources:findcontact.baml,i2:System.Windows.Controls.Label.$Content,Label,True,True,,Emaile Göre Bul:
+Messenger.g.en-US.resources:findcontact.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Ara
+Messenger.g.en-US.resources:findcontact.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Durdur
+Messenger.g.en-US.resources:findcontact.baml,b3:System.Windows.Controls.Button.$Content,Button,True,True,,İptal
+Messenger.g.en-US.resources:findcontact.baml,i3:System.Windows.Controls.Label.$Content,Label,True,True,,Arıyor...
+Messenger.g.en-US.resources:findcontact.baml,i4:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Results#i5;:
+Messenger.g.en-US.resources:findcontact.baml,i5:System.Windows.Controls.TextBlock.$Content,Text,True,True,,(daha uygun)
+Messenger.g.en-US.resources:findcontact.baml,i6:System.Windows.Controls.Button.$Content,Button,True,True,,Ekle
+Messenger.g.en-US.resources:findcontact.baml,c1:System.Windows.Controls.GridViewColumn.Header,None,True,True,,İsim
+Messenger.g.en-US.resources:findcontact.baml,c2:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Kaynak
+Messenger.g.en-US.resources:findcontact.baml,c3:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Başlık
+Messenger.g.en-US.resources:findcontact.baml,c4:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Ofis
+Messenger.g.en-US.resources:findcontact.baml,c5:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Telefon
+Messenger.g.en-US.resources:findcontact.baml,c6:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Şirket
+Messenger.g.en-US.resources:findcontact.baml,c7:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Şehir
+Messenger.g.en-US.resources:findcontact.baml,c8:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Bölge
+Messenger.g.en-US.resources:findcontact.baml,c9:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Ülke
+Messenger.g.en-US.resources:findcontact.baml,c10:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Email
+Messenger.g.en-US.resources:login.baml,w5:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Oturum Aç
+Messenger.g.en-US.resources:login.baml,i1:System.Windows.Controls.Label.$Content,Label,True,True,,Oturum açma adresi:
+Messenger.g.en-US.resources:login.baml,i2:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Son kullanıcı bilgilerini kullan
+Messenger.g.en-US.resources:login.baml,i3:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Aşağıdaki Kullancı adı ve Parolasını kullan
+Messenger.g.en-US.resources:login.baml,i4:System.Windows.Controls.Label.$Content,Label,True,True,,Kullanıcı Adı:
+Messenger.g.en-US.resources:login.baml,i5:System.Windows.Controls.Label.$Content,Label,True,True,,Parola:
+Messenger.g.en-US.resources:login.baml,i6:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,Otomatik olarak sunucu bul
+Messenger.g.en-US.resources:login.baml,i7:System.Windows.Controls.Label.$Content,Label,True,True,,Sunucu protokolü ve adı veya IP adresi:
+Messenger.g.en-US.resources:invite.baml,w6:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Gelen Arama
+Messenger.g.en-US.resources:invite.baml,i1:System.Windows.Controls.Label.$Content,Label,True,True,,Sesli-video görüşme daveti aldınız, kabul etmek istiyor musunuz?
+Messenger.g.en-US.resources:invite.baml,c1:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Nereden
+Messenger.g.en-US.resources:invite.baml,c2:System.Windows.Controls.GridViewColumn.Header,None,True,True,,İsim
+Messenger.g.en-US.resources:invite.baml,c3:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Oluşturuldu
+Messenger.g.en-US.resources:invite.baml,c4:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Durum
+Messenger.g.en-US.resources:addcontact.baml,w7:System.Windows.Window.Title,Title,True,True,,Kişi Ekle
+Messenger.g.en-US.resources:addcontact.baml,i1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Kaynak:
+Messenger.g.en-US.resources:addcontact.baml,i2:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Grup:
+Messenger.g.en-US.resources:ucctracing.baml,w8:System.Windows.Window.Title,Title,True,True,,Sorun Giderme için İzleme
+Messenger.g.en-US.resources:ucctracing.baml,i1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Bu pencere Sorun Giderme ve Hata Ayıklama amacı için İzleme modunu aktif/inaktif yapmak için kullanılır. Okumak için tıklayınız. <a>gizlilik</a>.
+Messenger.g.en-US.resources:ucctracing.baml,i2:System.Windows.Controls.CheckBox.$Content,CheckBox,True,True,,İzlemeyi aç
+Messenger.g.en-US.resources:ucctracing.baml,i3:System.Windows.Controls.Label.$Content,Label,True,True,,İzleme raporları
+Messenger.g.en-US.resources:ucctracing.baml,c1:System.Windows.Controls.GridViewColumn.Header,None,True,True,,İsim
+Messenger.g.en-US.resources:ucctracing.baml,c2:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Tarihi Güncelle
+Messenger.g.en-US.resources:crash2.baml,w9:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - İstisna
+Messenger.g.en-US.resources:crash2.baml,i1:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Program bir sorunla karşılaştı ve kapatılmak zorunda. Rahatsızlıktan dolayı özürdileriz..
+Messenger.g.en-US.resources:crash2.baml,i2:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Hatanın sebebini teşhis edebilmemiz ve bu yazılımı geliştirmemiz için lütfen bize rapor edin.
+Messenger.g.en-US.resources:crash2.baml,i3:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Teşekkürler!
+Messenger.g.en-US.resources:crash2.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Don&apos;t Send
+Messenger.g.en-US.resources:crash2.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Raporu Gönder
+Messenger.g.en-US.resources:crash2.baml,i4:System.Windows.Controls.Label.$Content,Label,True,True,,Gönderiliyor...
+Messenger.g.en-US.resources:crash2.baml,i5:System.Windows.Controls.TextBlock.$Content,Text,True,True,,Bitti:
+Messenger.g.en-US.resources:disconnect.baml,w10:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Bağlantı Yok
+Messenger.g.en-US.resources:disconnect.baml,i1:System.Windows.Controls.Label.$Content,Label,True,True,,Sunucu bağlantısı kayboldu:
+Messenger.g.en-US.resources:disconnect.baml,i2:System.Windows.Documents.Span.$Content,Text,True,True,,Bağlantı tekrar ayarlanıyor
+Messenger.g.en-US.resources:disconnect.baml,i3:System.Windows.Documents.Span.$Content,Text,True,True,,saniye bekleyin.
+Messenger.g.en-US.resources:avchat.baml,w11:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Sesli Video Görüşmesi
+Messenger.g.en-US.resources:chat.baml,w12:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Görüşme;
+Messenger.g.en-US.resources:chattabitemcontent.baml,i1:System.Windows.Documents.Span.$Content,Text,True,True,,Dosya Alınıyor;
+Messenger.g.en-US.resources:chattabitemcontent.baml,i2:System.Windows.Documents.Span.$Content,Text,True,True,,…
+Messenger.g.en-US.resources:chattabitemcontent.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Atla
+Messenger.g.en-US.resources:chattabitemcontent.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,İptal
+Messenger.g.en-US.resources:chattabitemcontent.baml,i3:System.Windows.Documents.Span.$Content,Text,True,True,,Dosya Gönderiliyor
+Messenger.g.en-US.resources:chattabitemcontent.baml,i4:System.Windows.Documents.Span.$Content,Text,True,True,,…
+Messenger.g.en-US.resources:chattabitemcontent.baml,b3:System.Windows.Controls.TextBlock.Text,Text,True,True,,Gönder
+Messenger.g.en-US.resources:userproperties.baml,w13:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Kullanıcı Özellikleri
+Messenger.g.en-US.resources:userproperties.baml,i1:System.Windows.Controls.Label.$Content,Label,True,True,,Emailler:
+Messenger.g.en-US.resources:userproperties.baml,i2:System.Windows.Controls.Label.$Content,Label,True,True,,Telefonlar:
+Messenger.g.en-US.resources:userproperties.baml,i3:System.Windows.Controls.Label.$Content,Label,True,True,,Faks:
+Messenger.g.en-US.resources:userproperties.baml,i4:System.Windows.Controls.Label.$Content,Label,True,True,,Web Sayfası:
+Messenger.g.en-US.resources:userproperties.baml,i5:System.Windows.Controls.Label.$Content,Label,True,True,,Adres:
+Messenger.g.en-US.resources:programme.baml,st0:System.String.$Content,None,True,True,,Uygun
+Messenger.g.en-US.resources:programme.baml,st1:System.String.$Content,None,True,True,,Dışarda
+Messenger.g.en-US.resources:programme.baml,st2:System.String.$Content,None,True,True,,Boşta
+Messenger.g.en-US.resources:programme.baml,st3:System.String.$Content,None,True,True,,Birazdan Dönecek
+Messenger.g.en-US.resources:programme.baml,st4:System.String.$Content,None,True,True,,Meşgul
+Messenger.g.en-US.resources:programme.baml,st5:System.String.$Content,None,True,True,,Meşgul (Dışarda)
+Messenger.g.en-US.resources:programme.baml,st6:System.String.$Content,None,True,True,,Rahatsız Etmeyin
+Messenger.g.en-US.resources:programme.baml,st7:System.String.$Content,None,True,True,,Çevrimdışı Görün
+Messenger.g.en-US.resources:programme.baml,st8:System.String.$Content,None,True,True,,Çevrimdışı
+Messenger.g.en-US.resources:selectfiles.baml,w14:System.Windows.Window.Title,Title,True,True,,AssemblyTitle - Dosya Seç
+Messenger.g.en-US.resources:selectfiles.baml,i1_1:System.Windows.Documents.Span.$Content,Text,True,True,,Kullanıcı
+Messenger.g.en-US.resources:selectfiles.baml,i1_2:System.Windows.Documents.Span.$Content,Text,True,True,,size dosya gönderiyor. Kabul etmek istiyor musunuz?
+Messenger.g.en-US.resources:selectfiles.baml,c1:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Kabul Et
+Messenger.g.en-US.resources:selectfiles.baml,c2:System.Windows.Controls.GridViewColumn.Header,None,True,True,,İsim
+Messenger.g.en-US.resources:selectfiles.baml,c3:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Boyut
+Messenger.g.en-US.resources:selectfiles.baml,c4:System.Windows.Controls.GridViewColumn.Header,None,True,True,,Mevcut
+Messenger.g.en-US.resources:selectfiles.baml,i2:System.Windows.Controls.Label.$Content,Label,True,True,,Alınan Dosyalar:
+Messenger.g.en-US.resources:selectfiles.baml,b1:System.Windows.Controls.Button.$Content,Button,True,True,,Seç
+Messenger.g.en-US.resources:selectfiles.baml,b2:System.Windows.Controls.Button.$Content,Button,True,True,,Kabul Et
+Messenger.g.en-US.resources:selectfiles.baml,b3:System.Windows.Controls.Button.$Content,Button,True,True,,Reddet
+Messenger.g.en-US.resources:programme.baml,buttonWidth:System.Windows.Setter.Value,None,False,True,,60

@@ -1,0 +1,47 @@
+﻿<!-- SOFTPHONE -->
+<w:WindowEx x:Class="Messenger.Windows.UccTracing"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:w="clr-namespace:Messenger.Windows"
+    WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+    Title="Tracing for Troubleshooting Purposes" Width="390" SizeToContent="Height" x:Uid="w8">
+    <Window.CommandBindings>
+        <CommandBinding Command="w:Commands.Ok" Executed="OkBinding_Executed" CanExecute="OkBinding_CanExecute"></CommandBinding>
+        <CommandBinding Command="w:Commands.Cancel" Executed="CancelBinding_Executed"></CommandBinding>
+        <CommandBinding Command="w:Commands.View" Executed="ViewBinding_Executed" CanExecute="ViewBinding_CanExecute"></CommandBinding>
+        <CommandBinding Command="w:Commands.Refresh" Executed="RefreshBinding_Executed" CanExecute="FolderActionBinding_CanExecute"></CommandBinding>
+        <CommandBinding Command="w:Commands.OpenFolder" Executed="OpenFolderBinding_Executed" CanExecute="FolderActionBinding_CanExecute"></CommandBinding>
+    </Window.CommandBindings>
+    <!-- SOFTPHONE -->
+    <StackPanel Style="{StaticResource MainPanel}">
+        <TextBlock Margin="0,0,0,10" TextWrapping="Wrap" TextAlignment="Justify" x:Uid="i1">This window can be used to enable and disable tracing for debugging and troubleshooting purposes. Click here to read <Hyperlink Click="Privacy_Click">privacy note</Hyperlink>.</TextBlock>
+        <CheckBox IsChecked="{Binding Path=EnableTracing}" x:Uid="i2">Enable tracing</CheckBox>
+        <Label x:Uid="i3">Tracing reports</Label>
+        <ListView Name="list" MinHeight="60" MaxHeight="120" ItemsSource="{Binding Path=Reports}" SelectedValue="{Binding Path=SelectedReportFullName}" SelectedValuePath="FullName">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="190" DisplayMemberBinding="{Binding Path=Name}" x:Uid="c1"></GridViewColumn>
+                    <GridViewColumn Header="Modify Time" Width="140" DisplayMemberBinding="{Binding Path=LastWriteTime}" x:Uid="c2"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Command="w:Commands.View"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Command="w:Commands.OpenFolder"></MenuItem>
+                    <MenuItem Command="w:Commands.Refresh"></MenuItem>
+                </ContextMenu>
+            </ListView.ContextMenu>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <EventSetter Event="MouseDoubleClick" Handler="ListView_Item_MouseDoubleClick"></EventSetter>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+        <StackPanel Style="{StaticResource OkCancelPanel}">
+            <Button Command="w:Commands.Cancel" IsCancel="True" Style="{StaticResource OkCancelButton}" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"></Button>
+            <Button Command="w:Commands.Ok" IsDefault="True" Style="{StaticResource OkCancelButton}" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"></Button>
+        </StackPanel>
+    </StackPanel>
+</w:WindowEx>
+<!-- SOFTPHONE -->

@@ -1,0 +1,43 @@
+﻿<w:WindowEx x:Class="Messenger.Windows.Invite"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:w="clr-namespace:Messenger.Windows"
+    xmlns:m="clr-namespace:Messenger"
+    xmlns:cm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+    Title="AssemblyTitle - Incoming Call"
+    WindowStartupLocation="CenterScreen" 
+    Topmost="True" ShowInTaskbar="False"
+    Width="480" SizeToContent="Height" ResizeMode="NoResize" SnapsToDevicePixels="True" x:Uid="w6">
+    <Window.CommandBindings>
+        <CommandBinding Command="w:Commands.AcceptCall" Executed="AcceptCallBinding_Executed" CanExecute="AcceptCallBinding_CanExecute"></CommandBinding>
+        <CommandBinding Command="w:Commands.RejectCall" Executed="RejectCallBinding_Executed" CanExecute="RejectCallBinding_CanExecute"></CommandBinding>
+        <CommandBinding Command="w:Commands.Redial" Executed="RedialBinding_Executed" CanExecute="RedialBinding_CanExecute"></CommandBinding>
+        <CommandBinding Command="w:Commands.Cancel" Executed="CancelBinding_Executed"></CommandBinding>
+    </Window.CommandBindings>
+    <StackPanel Margin="5">
+        <StackPanel.Resources>
+            <CollectionViewSource Source="{Binding Endpoint.AvInvites}" x:Key="sortedAvInvites">
+                <CollectionViewSource.SortDescriptions>
+                    <cm:SortDescription PropertyName="Created" Direction="Descending" />
+                </CollectionViewSource.SortDescriptions>
+            </CollectionViewSource>
+        </StackPanel.Resources>
+        <Label x:Uid="i1">You got invite to audio-video chat. Do you Accept the incoming call?</Label>
+        <ListView MaxHeight="120" ItemsSource="{Binding Source={StaticResource sortedAvInvites}}" SelectedItem="{Binding CurrentAvInvite}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="From" DisplayMemberBinding="{Binding Inviter.Aor}" x:Uid="c1"></GridViewColumn>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Inviter.DisplayName}" x:Uid="c2"></GridViewColumn>
+                    <GridViewColumn Header="Created" DisplayMemberBinding="{Binding Created}" x:Uid="c3"></GridViewColumn>
+                    <GridViewColumn Header="State" DisplayMemberBinding="{Binding State}" x:Uid="c4"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <StackPanel Style="{StaticResource OkCancelPanel}">
+            <Button Style="{StaticResource OkCancelButton}" IsDefault="True" Command="w:Commands.AcceptCall" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"></Button>
+            <Button Style="{StaticResource OkCancelButton}" Command="w:Commands.RejectCall" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"></Button>
+            <Button Style="{StaticResource OkCancelButton}" Command="w:Commands.Redial" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"></Button>
+            <Button Style="{StaticResource OkCancelButton}" IsCancel="True" Command="w:Commands.Cancel" Content="{Binding RelativeSource={RelativeSource Self}, Path=Command.Text}"></Button>
+        </StackPanel>
+    </StackPanel>
+</w:WindowEx>
