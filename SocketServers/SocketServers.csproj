@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{2353B83C-AFB0-42E9-BFA0-C8E1A9934AE3}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>SocketServers</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft.Win32.Ssp\BufferType.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\ContextAttr.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\ContextReq.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\CredentialUse.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\CredHandle.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\CtxtHandle.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\SafeContextBufferHandle.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\SafeCredHandle.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\SafeCtxtHandle.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\SchannelCred.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\SchProtocols.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\SecBuffer.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\SecBufferDesc.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\SecBufferDescEx.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\SecBufferEx.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\SecHandle.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\SecPkgContext_Names.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\SecPkgContext_Sizes.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\SecPkgContext_StreamSizes.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\SecPkgInfo.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\Secur32Dll.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\SecurityStatus.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\Sspi.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\SspiException.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\TargetDataRep.cs" />
+    <Compile Include="Microsoft.Win32.Ssp\UlAttribute.cs" />
+    <Compile Include="Pcap\PcapWriter.cs" />
+    <Compile Include="Pcap\Protocol.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SocketServers\BaseConnection.cs" />
+    <Compile Include="SocketServers\BaseTcpServer.cs" />
+    <Compile Include="SocketServers\BufferManager.cs" />
+    <Compile Include="SocketServers\ByteArraySegmentHelpers.cs" />
+    <Compile Include="SocketServers\EventArgsManager.cs" />
+    <Compile Include="SocketServers\HeaderContentConnection.cs" />
+    <Compile Include="SocketServers\ILockFreePool.cs" />
+    <Compile Include="SocketServers\ILockFreePoolItem.cs" />
+    <Compile Include="SocketServers\ILockFreePoolItemIndex.cs" />
+    <Compile Include="SocketServers\LockFreeFastPool.cs" />
+    <Compile Include="SocketServers\LockFreeItem.cs" />
+    <Compile Include="SocketServers\LockFreePool.cs" />
+    <Compile Include="SocketServers\LockFreeQueue.cs" />
+    <Compile Include="SocketServers\LockFreeQueueVars.cs" />
+    <Compile Include="SocketServers\LockFreeStack.cs" />
+    <Compile Include="SocketServers\LockFreeStackVars.cs" />
+    <Compile Include="SocketServers\Logger.cs" />
+    <Compile Include="SocketServers\ProtocolPort.cs" />
+    <Compile Include="SocketServers\Server.cs" />
+    <Compile Include="SocketServers\ServerAsyncEventArgs.cs" />
+    <Compile Include="SocketServers\ServerChangeEventArgs.cs" />
+    <Compile Include="SocketServers\ServerEndPoint.cs" />
+    <Compile Include="SocketServers\ServerEventHandlerRef.cs" />
+    <Compile Include="SocketServers\ServerEventHandlerVal.cs" />
+    <Compile Include="SocketServers\ServerInfoEventArgs.cs" />
+    <Compile Include="SocketServers\ServerProtocol.cs" />
+    <Compile Include="SocketServers\ServerProtocolHelper.cs" />
+    <Compile Include="SocketServers\ServersManager.cs" />
+    <Compile Include="SocketServers\ServersManagerConfig.cs" />
+    <Compile Include="SocketServers\SmartBufferPool.cs" />
+    <Compile Include="SocketServers\SocketEx.cs" />
+    <Compile Include="SocketServers\SocketRecycling.cs" />
+    <Compile Include="SocketServers\SpinLock.cs" />
+    <Compile Include="SocketServers\SspiContext.cs" />
+    <Compile Include="SocketServers\SspiTlsServer.cs" />
+    <Compile Include="SocketServers\StreamBuffer.cs" />
+    <Compile Include="SocketServers\TcpServer.cs" />
+    <Compile Include="SocketServers\ThreadSafeDictionary.cs" />
+    <Compile Include="SocketServers\UdpServer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

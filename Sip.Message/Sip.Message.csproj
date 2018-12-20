@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{01650058-F2D6-4DFA-863A-415DFB718963}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Sip.Message</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base.Message\Base64Encoding.cs" />
+    <Compile Include="Base.Message\BufferManager.cs" />
+    <Compile Include="Base.Message\ByteArrayPart.cs" />
+    <Compile Include="Base.Message\ByteArrayPartEqualityComparer.cs" />
+    <Compile Include="Base.Message\ByteArrayWriter.cs" />
+    <Compile Include="Base.Message\IBufferManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sip.Message\Addrspec.cs" />
+    <Compile Include="Sip.Message\AuthAlgorithms.cs" />
+    <Compile Include="Sip.Message\AuthQops.cs" />
+    <Compile Include="Sip.Message\AuthSchemes.cs" />
+    <Compile Include="Sip.Message\BeginEndIndex.cs" />
+    <Compile Include="Sip.Message\Challenge.cs" />
+    <Compile Include="Sip.Message\Converters.cs" />
+    <Compile Include="Sip.Message\Credentials.cs" />
+    <Compile Include="Sip.Message\Fromto.cs" />
+    <Compile Include="Sip.Message\Header.cs" />
+    <Compile Include="Sip.Message\HeaderMasks.cs" />
+    <Compile Include="Sip.Message\HeaderMasksHelper.cs" />
+    <Compile Include="Sip.Message\HeaderNames.cs" />
+    <Compile Include="Sip.Message\Hostport.cs" />
+    <Compile Include="Sip.Message\Methods.cs" />
+    <Compile Include="Sip.Message\Months.cs" />
+    <Compile Include="Sip.Message\SipMessage.cs" />
+    <Compile Include="Sip.Message\SipMessageReader.cs" />
+    <Compile Include="Sip.Message\SipMessageWriter.cs" />
+    <Compile Include="Sip.Message\SipResponseWriter.cs" />
+    <Compile Include="Sip.Message\StatusCodes.cs" />
+    <Compile Include="Sip.Message\StatusCodesConverter.cs" />
+    <Compile Include="Sip.Message\SubscriptionStates.cs" />
+    <Compile Include="Sip.Message\Transports.cs" />
+    <Compile Include="Sip.Message\UriSchemes.cs" />
+    <Compile Include="Sip.Message\UserAgents.cs" />
+    <Compile Include="Sip.Message\Wkdays.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
